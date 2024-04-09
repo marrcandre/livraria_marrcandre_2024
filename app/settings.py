@@ -71,8 +71,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "app.wsgi.application"
 
-# Database
-DATABASES = {"default": dj_database_url.config(default=os.getenv("DATABASE_URL"), conn_max_age=600)}
+# Databases
+DATABASES = {
+    'default': dj_database_url.config(
+        default='sqlite:///db.sqlite3',
+        conn_max_age=600,
+        conn_health_checks=True,
+    )
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -132,4 +138,4 @@ SPECTACULAR_SETTINGS = {
     "VERSION": "1.0.0",
 }
 
-print(f"MODE: {MODE} \nMEDIA_URL: {MEDIA_URL} \nDATABASE: {DATABASES}")
+print(f"MODE: {MODE} \nMEDIA_URL: {MEDIA_URL} \nDATABASES: {DATABASES}")
