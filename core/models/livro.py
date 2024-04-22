@@ -1,8 +1,8 @@
 from django.db import models
 
+from .autor import Autor
 from .categoria import Categoria
 from .editora import Editora
-from .autor import Autor
 
 
 class Livro(models.Model):
