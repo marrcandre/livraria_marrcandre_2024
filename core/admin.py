@@ -86,7 +86,7 @@ class LivroAdmin(admin.ModelAdmin):
 
 class ItensCompraInline(admin.TabularInline):
     model = ItensCompra
-    extra = 1 # Quantidade de itens adicionais
+    extra = 1  # Quantidade de itens adicionais
 
 
 @admin.register(Compra)
@@ -97,4 +97,3 @@ class CompraAdmin(admin.ModelAdmin):
     ordering = ("usuario", "status")
     list_per_page = 25
     inlines = [ItensCompraInline]
-
