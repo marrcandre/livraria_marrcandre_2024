@@ -4,6 +4,7 @@ from rest_framework.serializers import (
     HiddenField,
     ModelSerializer,
     SerializerMethodField,
+    ValidationError,
 )
 
 from core.models import Compra, ItensCompra
@@ -25,6 +26,13 @@ class CriarEditarItensCompraSerializer(ModelSerializer):
     class Meta:
         model = ItensCompra
         fields = ("livro", "quantidade")
+
+    def validate(self, data):
+        if data["quantidade"] > data["livro"].quantidade:
+            raise ValidationError(
+                {"quantidade": "Quantidade solicitada não disponível em estoque."}
+            )
+        return data
 
 
 class CompraSerializer(ModelSerializer):

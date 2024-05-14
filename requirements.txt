@@ -12,7 +12,7 @@ cloudinary==1.40.0
 colorama==0.4.6; sys_platform == "win32" or platform_system == "Windows"
 distlib==0.3.8
 dj-database-url==2.1.0
-django==5.0.4
+django==5.0.6
 django-cloudinary-storage==0.3.0
 django-cors-headers==4.3.1
 django-extensions==3.2.3
@@ -20,20 +20,20 @@ django-filter==24.2
 djangorestframework==3.15.1
 djangorestframework-simplejwt==5.3.1
 drf-spectacular==0.27.2
-filelock==3.13.4
+filelock==3.14.0
 gunicorn==22.0.0
 h11==0.14.0
 identify==2.5.36
 idna==3.7
 inflection==0.5.1
-jsonschema==4.21.1
+jsonschema==4.22.0
 jsonschema-specifications==2023.12.1
 netifaces==0.11.0
 nodeenv==1.8.0
 packaging==24.0
 pillow==10.3.0
-platformdirs==4.2.0
-pre-commit==3.7.0
+platformdirs==4.2.1
+pre-commit==3.7.1
 psycopg2-binary==2.9.9
 pydotplus==2.0.2
 pyjwt==2.8.0
@@ -42,9 +42,9 @@ python-dotenv==1.0.1
 python-magic==0.4.27; sys_platform == "linux"
 python-magic-bin==0.4.14; sys_platform == "win32"
 pyyaml==6.0.1
-referencing==0.34.0
+referencing==0.35.1
 requests==2.31.0
-rpds-py==0.18.0
+rpds-py==0.18.1
 setuptools==69.5.1
 six==1.16.0
 sqlparse==0.5.0
@@ -53,5 +53,5 @@ tzdata==2024.1; sys_platform == "win32"
 uritemplate==4.1.1
 urllib3==2.2.1
 uvicorn==0.29.0
-virtualenv==20.25.3
+virtualenv==20.26.2
 whitenoise==6.6.0
