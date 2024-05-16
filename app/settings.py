@@ -151,4 +151,4 @@ SPECTACULAR_SETTINGS = {
     "VERSION": "1.0.0",
 }
 
-print(f"MODE: {MODE} \nMEDIA_URL: {MEDIA_URL} \nDATABASES: {DATABASES}")
+print(f"{MODE = } \n{MEDIA_URL = } \n{DATABASES = }")
