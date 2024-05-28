@@ -48,10 +48,10 @@ urlpatterns = [
     path("token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
     path("token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path("api/media/", include(uploader_router.urls)),
-    # API
-    path("api/me/", CurrentUserView.as_view(), name="me"),
-    path("api/", include(router.urls)),
     # User
+    path("api/me/", CurrentUserView.as_view(), name="me"),
+    # API
+    path("api/", include(router.urls)),
 ]
 
 urlpatterns += static(settings.MEDIA_ENDPOINT, document_root=settings.MEDIA_ROOT)
