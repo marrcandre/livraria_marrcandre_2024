@@ -3,14 +3,14 @@ import uuid
 
 from django.db import models
 
-from utils.files import get_content_type
+from uploader.helpers.files import get_content_type
 
 
-def document_file_path(document, _):
+def document_file_path(document, _) -> str:
     content_type = get_content_type(document.file)
-    extension = mimetypes.guess_extension(content_type)
+    extension: str = mimetypes.guess_extension(content_type)
 
-    return "documents/{}{}".format(document.public_id, extension or "")
+    return f"documents/{document.public_id}{extension or ''}"
 
 
 class Document(models.Model):
@@ -18,7 +18,10 @@ class Document(models.Model):
         max_length=255,
         default=uuid.uuid4,
         unique=True,
-        help_text=("Used to attach the document to another object. " "Cannot be used to retrieve the document file."),
+        help_text=(
+            "Used to attach the document to another object. "
+            "Cannot be used to retrieve the document file."
+        ),
     )
     public_id = models.UUIDField(
         max_length=255,
@@ -33,9 +36,9 @@ class Document(models.Model):
     description = models.CharField(max_length=255, blank=True)
     uploaded_on = models.DateTimeField(auto_now_add=True)
 
-    def __str__(self):
-        return "%s - (%s)" % (self.description, self.file.name)
+    def __str__(self) -> str:
+        return f"{self.description} - {self.file.name}"
 
     @property
-    def url(self):
-        return self.file.url
+    def url(self) -> str:
+        return self.file.url        # pylint: disable=no-member

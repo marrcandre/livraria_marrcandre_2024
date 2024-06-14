@@ -1,14 +1,14 @@
 from rest_framework import serializers
 
+from uploader.helpers.files import CONTENT_TYPE_JPG, CONTENT_TYPE_PNG
 from uploader.models import Image
-from utils.files import CONTENT_TYPE_JPG, CONTENT_TYPE_PNG, get_content_type
 
 
 class ImageUploadSerializer(serializers.ModelSerializer):
     class Meta:
         model = Image
-        fields = ["attachment_key", "file", "description", "uploaded_on"]
-        read_only_fields = ["attachment_key", "uploaded_on"]
+        fields = ["attachment_key", "file", "description", "uploaded_on", "url"]
+        read_only_fields = ["attachment_key", "uploaded_on", "url"]
         extra_kwargs = {"file": {"write_only": True}}
 
     def validate_file(self, value):
