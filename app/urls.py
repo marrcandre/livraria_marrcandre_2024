@@ -15,7 +15,6 @@ from core.views import (
     AutorViewSet,
     CategoriaViewSet,
     CompraViewSet,
-    CurrentUserView,
     EditoraViewSet,
     LivroViewSet,
     UserViewSet,
@@ -48,8 +47,6 @@ urlpatterns = [
     path("token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
     path("token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path("api/media/", include(uploader_router.urls)),
-    # User
-    path("api/me/", CurrentUserView.as_view(), name="me"),
     # API
     path("api/", include(router.urls)),
 ]
