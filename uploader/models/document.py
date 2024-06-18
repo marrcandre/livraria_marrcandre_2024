@@ -18,10 +18,7 @@ class Document(models.Model):
         max_length=255,
         default=uuid.uuid4,
         unique=True,
-        help_text=(
-            "Used to attach the document to another object. "
-            "Cannot be used to retrieve the document file."
-        ),
+        help_text=("Used to attach the document to another object. " "Cannot be used to retrieve the document file."),
     )
     public_id = models.UUIDField(
         max_length=255,
@@ -41,4 +38,4 @@ class Document(models.Model):
 
     @property
     def url(self) -> str:
-        return self.file.url        # pylint: disable=no-member
+        return self.file.url  # pylint: disable=no-member
