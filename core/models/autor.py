@@ -6,7 +6,7 @@ class Autor(models.Model):
     email = models.EmailField(max_length=100, blank=True, null=True)
 
     def __str__(self):
-        return f"{self.nome} ({self.id})"
+        return f"({self.id}) {self.nome} "
 
     class Meta:
         verbose_name = "Autor"
