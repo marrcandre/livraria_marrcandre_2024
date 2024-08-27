@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.db import transaction
 
 from django_filters.rest_framework import DjangoFilterBackend
@@ -20,6 +21,7 @@ class CompraViewSet(ModelViewSet):
     ordering_fields = ["usuario__email", "status", "data"]
     ordering = ["-data"]
 
+    @login_required
     def get_queryset(self):
         usuario = self.request.user
         if usuario.is_superuser:

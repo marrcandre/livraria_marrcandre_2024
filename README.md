@@ -51,11 +51,11 @@ O template também traz o usuário padrão modificado, com o login sendo feito c
    pdm run dev
    ```
 
-7. Acesse a API em http://localhost:19003/api/
+7. Acesse a API em http://localhost:19005/api/
 
 ## Uso da API
 
-A documentação completa dos endpoints da API e exemplos de uso estão disponíveis na [Documentação da API](http://localhost:19003/api/swagger/).
+A documentação completa dos endpoints da API e exemplos de uso estão disponíveis na [Documentação da API](http://localhost:19005/api/swagger/).
 
 ## Comandos Úteis
 

@@ -12,7 +12,7 @@ password=$2
 
 # Executa o comando curl com os parâmetros fornecidos
 response=$(curl --silent -X 'POST' \
-  'http://0.0.0.0:19003/token/' \
+  'http://0.0.0.0:19005/token/' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -H 'X-CSRFTOKEN: 7iW9WGU8frH4WNcUEueM7gyyx26vbkcXLDnZ0pEwl9sbyErBMyUSDhOa3uOP8sO3' \
