@@ -21,7 +21,6 @@ class CompraViewSet(ModelViewSet):
     ordering_fields = ["usuario__email", "status", "data"]
     ordering = ["-data"]
 
-    @login_required
     def get_queryset(self):
         usuario = self.request.user
         if usuario.is_superuser:
@@ -60,3 +59,6 @@ class CompraViewSet(ModelViewSet):
             compra.status = Compra.StatusCompra.REALIZADO
             compra.save()
         return Response(status=status.HTTP_200_OK, data={"status": "Compra finalizada"})
+
+    # TODO: criar uma função para adicionar um livro no carrinho de compra
+
