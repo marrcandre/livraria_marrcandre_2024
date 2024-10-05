@@ -85,7 +85,7 @@ class LivroAdmin(admin.ModelAdmin):
     list_per_page = 25
 
 
-class ItensCompraInline(admin.StackedInline): # Ou use TabularInline
+class ItensCompraInline(admin.StackedInline):  # Ou use TabularInline
     model = ItensCompra
     extra = 1  # Quantidade de itens adicionais
 

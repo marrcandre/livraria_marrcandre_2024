@@ -61,4 +61,3 @@ class CompraViewSet(ModelViewSet):
         return Response(status=status.HTTP_200_OK, data={"status": "Compra finalizada"})
 
     # TODO: criar uma função para adicionar um livro no carrinho de compra
-

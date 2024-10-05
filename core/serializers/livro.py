@@ -28,10 +28,7 @@ class LivroSerializer(ModelSerializer):
         required=False,
         write_only=True,  # Não será exibido na resposta
     )
-    capa = ImageSerializer(
-        required=False,
-        read_only=True  # Não será usado para criar ou atualizar
-    )
+    capa = ImageSerializer(required=False, read_only=True)  # Não será usado para criar ou atualizar
 
     class Meta:
         model = Livro
