@@ -1,4 +1,3 @@
-from django.contrib.auth.decorators import login_required
 from django.db import transaction
 
 from django_filters.rest_framework import DjangoFilterBackend
