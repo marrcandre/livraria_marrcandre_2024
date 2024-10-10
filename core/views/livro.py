@@ -26,7 +26,7 @@ class LivroViewSet(ModelViewSet):
             return LivroDetailSerializer
         return LivroSerializer
 
-    @action(detail=True, methods=["patch"], url_path="alterar-preco")
+    @action(detail=True, methods=["patch"], url_path="alterar_preco")
     def alterar_preco(self, request, pk=None):
         # Busca o livro pelo ID
         livro = get_object_or_404(Livro, pk=pk)
@@ -50,4 +50,46 @@ class LivroViewSet(ModelViewSet):
         # Retorna uma resposta de sucesso
         return Response(
             {"detail": f"Preço do livro '{livro.titulo}' atualizado para {livro.preco}."}, status=status.HTTP_200_OK
+        )
+
+    @action(detail=True, methods=["post"])
+    def ajustar_estoque(self, request, pk=None):
+        # Recupera o livro pelo ID
+        livro = get_object_or_404(Livro, pk=pk)
+
+        # Recupera o valor de ajuste passado no body da requisição
+        quantidade_ajuste = request.data.get("quantidade")
+
+        if quantidade_ajuste is None:
+            return Response(
+                {"erro": "Por favor, informe uma quantidade para ajustar."},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        try:
+            # Tenta converter o valor para um número inteiro
+            quantidade_ajuste = int(quantidade_ajuste)
+        except ValueError:
+            return Response(
+                {"erro": "O valor de ajuste deve ser um número inteiro."},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        # Atualiza a quantidade em estoque
+        livro.quantidade += quantidade_ajuste
+
+        # Garante que o estoque não seja negativo
+        if livro.quantidade < 0:
+            return Response(
+                {"erro": "A quantidade em estoque não pode ser negativa."},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+
+        # Salva as alterações no banco de dados
+        livro.save()
+
+        # Retorna uma resposta com o novo valor em estoque
+        return Response(
+            {"status": "Quantidade ajustada com sucesso", "novo_estoque": livro.quantidade},
+            status=status.HTTP_200_OK
         )

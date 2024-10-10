@@ -14,7 +14,8 @@ def get_current_ip():
         with contextlib.suppress(ValueError, KeyError):
             addresses = ni.ifaddresses(interface)
             ipv4_address = addresses[ni.AF_INET][0]["addr"]
-            if ipv4_address.startswith("191."):
+            if ipv4_address != "127.0.0.1":
+            # if ipv4_address.startswith("191."):
                 return ipv4_address
 
     return None

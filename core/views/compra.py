@@ -51,6 +51,7 @@ class CompraViewSet(ModelViewSet):
                         data={
                             "status": "Quantidade insuficiente",
                             "livro": item.livro.titulo,
+                            "quantidade_disponivel": item.livro.quantidade,
                         },
                     )
                 item.livro.quantidade -= item.quantidade
