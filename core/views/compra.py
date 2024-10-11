@@ -12,8 +12,6 @@ from core.serializers import CompraSerializer, CriarEditarCompraSerializer
 
 
 class CompraViewSet(ModelViewSet):
-    queryset = Compra.objects.all()
-    serializer_class = CompraSerializer
     filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
     filterset_fields = ["usuario__email", "status", "data"]
     search_fields = ["usuario__email"]
@@ -23,11 +21,11 @@ class CompraViewSet(ModelViewSet):
     def get_queryset(self):
         usuario = self.request.user
         if usuario.is_superuser:
-            return Compra.objects.all()
-        if usuario.groups.filter(name="Administradores"):
-            return Compra.objects.all()
+            return Compra.objects.order_by("-id")
+        if usuario.groups.filter(name="administradores"):
+            return Compra.objects.order_by("-id")
         if usuario.tipo_usuario == User.TipoUsuario.GERENTE:
-            return Compra.objects.all()
+            return Compra.objects.order_by("-id")
         return Compra.objects.filter(usuario=usuario)
 
     def get_serializer_class(self):
@@ -79,4 +77,3 @@ class CompraViewSet(ModelViewSet):
 
         # Retorna uma resposta de sucesso indicando que a compra foi finalizada.
         return Response(status=status.HTTP_200_OK, data={"status": "Compra finalizada"})
-

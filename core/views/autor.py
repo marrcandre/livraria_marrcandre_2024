@@ -5,6 +5,5 @@ from core.serializers import AutorSerializer
 
 
 class AutorViewSet(ModelViewSet):
-    queryset = Autor.objects.all()
+    queryset = Autor.objects.order_by("-id")
     serializer_class = AutorSerializer
-    http_method_names = ["get", "post", "put"]

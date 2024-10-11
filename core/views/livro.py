@@ -1,4 +1,5 @@
 from django.shortcuts import get_object_or_404
+
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import status
 from rest_framework.decorators import action
@@ -11,8 +12,7 @@ from core.serializers import LivroDetailSerializer, LivroListSerializer, LivroSe
 
 
 class LivroViewSet(ModelViewSet):
-    queryset = Livro.objects.all()
-    serializer_class = LivroSerializer
+    queryset = Livro.objects.order_by("-id")
     filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
     filterset_fields = ["categoria__descricao", "editora__nome"]
     search_fields = ["titulo"]
@@ -62,8 +62,7 @@ class LivroViewSet(ModelViewSet):
 
         if quantidade_ajuste is None:
             return Response(
-                {"erro": "Por favor, informe uma quantidade para ajustar."},
-                status=status.HTTP_400_BAD_REQUEST
+                {"erro": "Por favor, informe uma quantidade para ajustar."}, status=status.HTTP_400_BAD_REQUEST
             )
 
         try:
@@ -71,8 +70,7 @@ class LivroViewSet(ModelViewSet):
             quantidade_ajuste = int(quantidade_ajuste)
         except ValueError:
             return Response(
-                {"erro": "O valor de ajuste deve ser um número inteiro."},
-                status=status.HTTP_400_BAD_REQUEST
+                {"erro": "O valor de ajuste deve ser um número inteiro."}, status=status.HTTP_400_BAD_REQUEST
             )
 
         # Atualiza a quantidade em estoque
@@ -81,8 +79,7 @@ class LivroViewSet(ModelViewSet):
         # Garante que o estoque não seja negativo
         if livro.quantidade < 0:
             return Response(
-                {"erro": "A quantidade em estoque não pode ser negativa."},
-                status=status.HTTP_400_BAD_REQUEST
+                {"erro": "A quantidade em estoque não pode ser negativa."}, status=status.HTTP_400_BAD_REQUEST
             )
 
         # Salva as alterações no banco de dados
@@ -90,6 +87,5 @@ class LivroViewSet(ModelViewSet):
 
         # Retorna uma resposta com o novo valor em estoque
         return Response(
-            {"status": "Quantidade ajustada com sucesso", "novo_estoque": livro.quantidade},
-            status=status.HTTP_200_OK
+            {"status": "Quantidade ajustada com sucesso", "novo_estoque": livro.quantidade}, status=status.HTTP_200_OK
         )
