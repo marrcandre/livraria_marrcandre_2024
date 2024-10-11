@@ -37,27 +37,46 @@ class CompraViewSet(ModelViewSet):
 
     @action(detail=True, methods=["post"])
     def finalizar(self, request, pk=None):
+        # Recupera o objeto 'compra' usando self.get_object(), com base no pk fornecido.
         compra = self.get_object()
+
+        # Verifica se o status da compra é diferente de 'CARRINHO'.
+        # Se não for, a compra já foi finalizada e não pode ser finalizada novamente.
         if compra.status != Compra.StatusCompra.CARRINHO:
             return Response(
                 status=status.HTTP_400_BAD_REQUEST,
                 data={"status": "Compra já finalizada"},
             )
+
+        # Abre uma transação atômica para garantir que todas as operações no banco
+        # de dados ocorram de forma consistente (ou todas são salvas ou nenhuma).
         with transaction.atomic():
+            # Itera sobre todos os itens da compra.
             for item in compra.itens.all():
+
+                # Verifica se a quantidade de um item é maior que a quantidade disponível no estoque do livro.
                 if item.quantidade > item.livro.quantidade:
+                    # Se a quantidade solicitada for maior que o estoque disponível, retorna um erro.
                     return Response(
                         status=status.HTTP_400_BAD_REQUEST,
                         data={
-                            "status": "Quantidade insuficiente",
-                            "livro": item.livro.titulo,
-                            "quantidade_disponivel": item.livro.quantidade,
+                            "status": "Quantidade insuficiente",  # Mensagem de erro
+                            "livro": item.livro.titulo,  # Informa qual livro tem estoque insuficiente
+                            "quantidade_disponivel": item.livro.quantidade,  # Mostra a quantidade disponível
                         },
                     )
+
+                # Se o estoque for suficiente, subtrai a quantidade do item do estoque do livro.
                 item.livro.quantidade -= item.quantidade
+                # Salva as alterações no livro (atualiza o estoque no banco de dados).
                 item.livro.save()
+
+            # Após todos os itens serem processados e o estoque ser atualizado,
+            # atualiza o status da compra para 'REALIZADO'.
             compra.status = Compra.StatusCompra.REALIZADO
+            # Salva as alterações da compra no banco de dados.
             compra.save()
+
+        # Retorna uma resposta de sucesso indicando que a compra foi finalizada.
         return Response(status=status.HTTP_200_OK, data={"status": "Compra finalizada"})
 
-    # TODO: criar uma função para adicionar um livro no carrinho de compra

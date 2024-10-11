@@ -26,10 +26,10 @@ class LivroViewSet(ModelViewSet):
             return LivroDetailSerializer
         return LivroSerializer
 
-    @action(detail=True, methods=["patch"], url_path="alterar_preco")
+    @action(detail=True, methods=["patch"])
     def alterar_preco(self, request, pk=None):
-        # Busca o livro pelo ID
-        livro = get_object_or_404(Livro, pk=pk)
+        # Busca o livro pelo ID usando self.get_object()
+        livro = self.get_object()
 
         # Obtém o novo preço do corpo da requisição
         novo_preco = request.data.get("preco")
@@ -54,8 +54,8 @@ class LivroViewSet(ModelViewSet):
 
     @action(detail=True, methods=["post"])
     def ajustar_estoque(self, request, pk=None):
-        # Recupera o livro pelo ID
-        livro = get_object_or_404(Livro, pk=pk)
+        # Recupera o livro pelo ID usando self.get_object()
+        livro = self.get_object()
 
         # Recupera o valor de ajuste passado no body da requisição
         quantidade_ajuste = request.data.get("quantidade")
