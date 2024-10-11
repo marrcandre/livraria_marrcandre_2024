@@ -8,7 +8,11 @@ from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 
 from core.models import Compra, User
-from core.serializers import CompraSerializer, CriarEditarCompraSerializer
+from core.serializers import (
+    CompraSerializer,
+    CriarEditarCompraSerializer,
+    ListarCompraSerializer,
+)
 
 
 class CompraViewSet(ModelViewSet):
@@ -29,6 +33,8 @@ class CompraViewSet(ModelViewSet):
         return Compra.objects.filter(usuario=usuario)
 
     def get_serializer_class(self):
+        if self.action == "list":
+            return ListarCompraSerializer
         if self.action in ("create", "update"):
             return CriarEditarCompraSerializer
         return CompraSerializer
