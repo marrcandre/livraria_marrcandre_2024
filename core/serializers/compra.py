@@ -44,13 +44,13 @@ class CriarEditarItensCompraSerializer(ModelSerializer):
 class CompraSerializer(ModelSerializer):
     usuario = CharField(source="usuario.email", read_only=True)
     status = CharField(source="get_status_display", read_only=True)
-    # TODO: Incluir tipo de pagamento
-    data = DateTimeField(read_only=True)  # novo campo
+    data = DateTimeField(read_only=True)
+    tipo_pagamento = CharField(source="get_tipo_pagamento_display", read_only=True) # novo campo
     itens = ItensCompraSerializer(many=True, read_only=True)
 
     class Meta:
         model = Compra
-        fields = ("id", "usuario", "status", "total", "data", "itens")
+        fields = ("id", "usuario", "status", "total", "data", "tipo_pagamento", "itens") # modificado
 
 
 class CriarEditarCompraSerializer(ModelSerializer):
