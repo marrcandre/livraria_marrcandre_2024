@@ -9,5 +9,10 @@ from .compra import (
     ListarItensCompraSerializer,
 )
 from .editora import EditoraSerializer
-from .livro import LivroDetailSerializer, LivroListSerializer, LivroSerializer
+from .livro import (
+    AlterarPrecoSerializer,
+    LivroDetailSerializer,
+    LivroListSerializer,
+    LivroSerializer,
+)
 from .user import UserSerializer

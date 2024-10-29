@@ -8,7 +8,12 @@ from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 
 from core.models import Livro
-from core.serializers import LivroDetailSerializer, LivroListSerializer, LivroSerializer
+from core.serializers import (
+    AlterarPrecoSerializer,
+    LivroDetailSerializer,
+    LivroListSerializer,
+    LivroSerializer,
+)
 
 
 class LivroViewSet(ModelViewSet):
@@ -28,29 +33,25 @@ class LivroViewSet(ModelViewSet):
 
     @action(detail=True, methods=["patch"])
     def alterar_preco(self, request, pk=None):
-        # Busca o livro pelo ID usando self.get_object()
+        # Busca o livro pelo ID
         livro = self.get_object()
 
-        # Obtém o novo preço do corpo da requisição
-        novo_preco = request.data.get("preco")
+        # Instancia o serializer passando os dados da requisição
+        serializer = AlterarPrecoSerializer(data=request.data)
 
-        # Verifica se o preço foi fornecido e se é um número válido
-        if novo_preco is None:
-            return Response({"detail": "O preço é obrigatório."}, status=status.HTTP_400_BAD_REQUEST)
+        # Valida os dados
+        if serializer.is_valid():
+            # Atualiza o preço do livro com o valor validado
+            livro.preco = serializer.validated_data["preco"]
+            livro.save()
 
-        try:
-            novo_preco = float(novo_preco)
-        except ValueError:
-            return Response({"detail": "O preço deve ser um número válido."}, status=status.HTTP_400_BAD_REQUEST)
+            # Retorna uma resposta de sucesso
+            return Response(
+                {"detail": f"Preço do livro '{livro.titulo}' atualizado para {livro.preco}."}, status=status.HTTP_200_OK
+            )
 
-        # Atualiza o preço do livro e salva
-        livro.preco = novo_preco
-        livro.save()
-
-        # Retorna uma resposta de sucesso
-        return Response(
-            {"detail": f"Preço do livro '{livro.titulo}' atualizado para {livro.preco}."}, status=status.HTTP_200_OK
-        )
+        # Retorna uma resposta de erro caso os dados sejam inválidos
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
     @action(detail=True, methods=["post"])
     def ajustar_estoque(self, request, pk=None):
