@@ -1,5 +1,3 @@
-# TODO: Modificar nomes dos serializers para padrão EntidadeMetodosSerializer
-
 from rest_framework.serializers import (
     CharField,
     CurrentUserDefault,
