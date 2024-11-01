@@ -1,5 +1,3 @@
-from django.shortcuts import get_object_or_404
-
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import status
 from rest_framework.decorators import action
@@ -9,9 +7,9 @@ from rest_framework.viewsets import ModelViewSet
 
 from core.models import Livro
 from core.serializers import (
-    AlterarPrecoSerializer,
-    LivroDetailSerializer,
+    LivroAlterarPrecoSerializer,
     LivroListSerializer,
+    LivroRetrieveSerializer,
     LivroSerializer,
 )
 
@@ -28,7 +26,8 @@ class LivroViewSet(ModelViewSet):
         if self.action == "list":
             return LivroListSerializer
         elif self.action == "retrieve":
-            return LivroDetailSerializer
+            return LivroRetrieveSerializer
+
         return LivroSerializer
 
     @action(detail=True, methods=["patch"])
@@ -37,7 +36,7 @@ class LivroViewSet(ModelViewSet):
         livro = self.get_object()
 
         # Instancia o serializer passando os dados da requisição
-        serializer = AlterarPrecoSerializer(data=request.data)
+        serializer = LivroAlterarPrecoSerializer(data=request.data)
 
         # Valida os dados
         if serializer.is_valid():

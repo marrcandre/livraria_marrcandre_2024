@@ -11,7 +11,7 @@ from uploader.models import Image
 from uploader.serializers import ImageSerializer
 
 
-class LivroDetailSerializer(ModelSerializer):
+class LivroRetrieveSerializer(ModelSerializer):
     capa = ImageSerializer(required=False)
 
     class Meta:
@@ -41,7 +41,7 @@ class LivroSerializer(ModelSerializer):
         fields = "__all__"
 
 
-class AlterarPrecoSerializer(Serializer):
+class LivroAlterarPrecoSerializer(Serializer):
     preco = DecimalField(max_digits=10, decimal_places=2)
 
     def validate_preco(self, value):
