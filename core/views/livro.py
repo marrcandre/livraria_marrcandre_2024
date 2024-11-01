@@ -7,6 +7,7 @@ from rest_framework.viewsets import ModelViewSet
 
 from core.models import Livro
 from core.serializers import (
+    LivroAjustarEstoqueSerializer,
     LivroAlterarPrecoSerializer,
     LivroListSerializer,
     LivroRetrieveSerializer,
@@ -38,51 +39,32 @@ class LivroViewSet(ModelViewSet):
         # Instancia o serializer passando os dados da requisição
         serializer = LivroAlterarPrecoSerializer(data=request.data)
 
-        # Valida os dados
-        if serializer.is_valid():
-            # Atualiza o preço do livro com o valor validado
-            livro.preco = serializer.validated_data["preco"]
-            livro.save()
+        # Valida os dados e lança uma exceção se inválidos
+        serializer.is_valid(raise_exception=True)
 
-            # Retorna uma resposta de sucesso
-            return Response(
-                {"detail": f"Preço do livro '{livro.titulo}' atualizado para {livro.preco}."}, status=status.HTTP_200_OK
-            )
+        # Atualiza o preço do livro com o valor validado
+        livro.preco = serializer.validated_data["preco"]
+        livro.save()
 
-        # Retorna uma resposta de erro caso os dados sejam inválidos
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        # Retorna uma resposta de sucesso
+        return Response(
+            {"detail": f"Preço do livro '{livro.titulo}' atualizado para {livro.preco}."}, status=status.HTTP_200_OK
+        )
 
     @action(detail=True, methods=["post"])
     def ajustar_estoque(self, request, pk=None):
-        # Recupera o livro pelo ID usando self.get_object()
+        # Recupera o livro pelo ID
         livro = self.get_object()
 
-        # Recupera o valor de ajuste passado no body da requisição
-        quantidade_ajuste = request.data.get("quantidade")
+        # Serializa os dados de entrada com o livro como contexto
+        serializer = LivroAjustarEstoqueSerializer(data=request.data, context={"livro": livro})
+        serializer.is_valid(raise_exception=True)
 
-        if quantidade_ajuste is None:
-            return Response(
-                {"erro": "Por favor, informe uma quantidade para ajustar."}, status=status.HTTP_400_BAD_REQUEST
-            )
+        # Obtém a quantidade ajustada validada
+        quantidade_ajuste = serializer.validated_data["quantidade"]
 
-        try:
-            # Tenta converter o valor para um número inteiro
-            quantidade_ajuste = int(quantidade_ajuste)
-        except ValueError:
-            return Response(
-                {"erro": "O valor de ajuste deve ser um número inteiro."}, status=status.HTTP_400_BAD_REQUEST
-            )
-
-        # Atualiza a quantidade em estoque
+        # Ajusta o estoque e salva
         livro.quantidade += quantidade_ajuste
-
-        # Garante que o estoque não seja negativo
-        if livro.quantidade < 0:
-            return Response(
-                {"erro": "A quantidade em estoque não pode ser negativa."}, status=status.HTTP_400_BAD_REQUEST
-            )
-
-        # Salva as alterações no banco de dados
         livro.save()
 
         # Retorna uma resposta com o novo valor em estoque
