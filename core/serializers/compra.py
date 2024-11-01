@@ -13,19 +13,7 @@ from rest_framework.serializers import (
 from core.models import Compra, ItensCompra
 
 
-class ItensCompraSerializer(ModelSerializer):
-    total = SerializerMethodField()
-
-    def get_total(self, item):
-        return item.preco * item.quantidade
-
-    class Meta:
-        model = ItensCompra
-        fields = ("livro", "quantidade", "preco", "total")
-        depth = 1
-
-
-class CriarEditarItensCompraSerializer(ModelSerializer):
+class ItensCompraCreateUpdateSerializer(ModelSerializer):
     class Meta:
         model = ItensCompra
         fields = ("livro", "quantidade")
@@ -41,7 +29,7 @@ class CriarEditarItensCompraSerializer(ModelSerializer):
         return value
 
 
-class ListarItensCompraSerializer(ModelSerializer):
+class ItensCompraListSerializer(ModelSerializer):
     livro = CharField(source="livro.titulo", read_only=True)
 
     class Meta:
@@ -50,21 +38,21 @@ class ListarItensCompraSerializer(ModelSerializer):
         depth = 1
 
 
-class CompraSerializer(ModelSerializer):
-    usuario = CharField(source="usuario.email", read_only=True)
-    status = CharField(source="get_status_display", read_only=True)
-    data = DateTimeField(read_only=True)
-    tipo_pagamento = CharField(source="get_tipo_pagamento_display", read_only=True)  # novo campo
-    itens = ItensCompraSerializer(many=True, read_only=True)
+class ItensCompraSerializer(ModelSerializer):
+    total = SerializerMethodField()
+
+    def get_total(self, item):
+        return item.preco * item.quantidade
 
     class Meta:
-        model = Compra
-        fields = ("id", "usuario", "status", "total", "data", "tipo_pagamento", "itens")  # modificado
+        model = ItensCompra
+        fields = ("livro", "quantidade", "preco", "total")
+        depth = 1
 
 
-class CriarEditarCompraSerializer(ModelSerializer):
+class CompraCreateUpdateSerializer(ModelSerializer):
     usuario = HiddenField(default=CurrentUserDefault())
-    itens = CriarEditarItensCompraSerializer(many=True)
+    itens = ItensCompraCreateUpdateSerializer(many=True)
 
     class Meta:
         model = Compra
@@ -89,10 +77,22 @@ class CriarEditarCompraSerializer(ModelSerializer):
         return super().update(compra, validated_data)
 
 
-class ListarCompraSerializer(ModelSerializer):
+class CompraListSerializer(ModelSerializer):
     usuario = CharField(source="usuario.email", read_only=True)
-    itens = ListarItensCompraSerializer(many=True, read_only=True)
+    itens = ItensCompraListSerializer(many=True, read_only=True)
 
     class Meta:
         model = Compra
         fields = ("id", "usuario", "total", "itens")
+
+
+class CompraSerializer(ModelSerializer):
+    usuario = CharField(source="usuario.email", read_only=True)
+    status = CharField(source="get_status_display", read_only=True)
+    data = DateTimeField(read_only=True)
+    tipo_pagamento = CharField(source="get_tipo_pagamento_display", read_only=True)  # novo campo
+    itens = ItensCompraSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Compra
+        fields = ("id", "usuario", "status", "total", "data", "tipo_pagamento", "itens")  # modificado

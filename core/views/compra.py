@@ -10,9 +10,9 @@ from rest_framework.viewsets import ModelViewSet
 
 from core.models import Compra, User
 from core.serializers import (
+    CompraCreateUpdateSerializer,
+    CompraListSerializer,
     CompraSerializer,
-    CriarEditarCompraSerializer,
-    ListarCompraSerializer,
 )
 
 
@@ -35,9 +35,10 @@ class CompraViewSet(ModelViewSet):
 
     def get_serializer_class(self):
         if self.action == "list":
-            return ListarCompraSerializer
+            return CompraListSerializer
         if self.action in ("create", "update"):
-            return CriarEditarCompraSerializer
+            return CompraCreateUpdateSerializer
+
         return CompraSerializer
 
     @action(detail=True, methods=["post"])
