@@ -1,6 +1,6 @@
 # Template de projeto Django com DRF e PDM
 
-Esse é um template de projeto Django com DRF, PDM e muito mais. Ele já vem com algumas configurações e pacotes pré-instalados, como o [PDM](https://pdm.fming.dev/), [Django](https://www.djangoproject.com/), [Django REST Framework](https://www.django-rest-framework.org/), [PostgreSQL](https://www.postgresql.org/), [SQLite](https://www.sqlite.org/index.html), [Swagger](https://swagger.io/), [Black](), [isort](), [Fl0](), [Cloudinary](), [Corsheaders](), [Django-Extensions](), [Django-Filter](), [dotenv](), [drf-spectacular](), [gunicon](), [netifaces](), [rest-framework-simplejwt]() e [whitenoise]().
+Esse é um template de projeto Django com DRF, PDM e muito mais. Ele já vem com algumas configurações e pacotes pré-instalados, como o [PDM](https://pdm.fming.dev/), [Django](https://www.djangoproject.com/), [Django REST Framework](https://www.django-rest-framework.org/), [PostgreSQL](https://www.postgresql.org/), [SQLite](https://www.sqlite.org/index.html), [Swagger](https://swagger.io/), [Black](), [isort](), [Fl0](), [Cloudinary](), [Corsheaders](), [Django-Extensions](), [Django-Filter](), [dotenv](), [drf-spectacular](), [gunicon](), [netifaces]() e [whitenoise]().
 
 Esse template já está pronto para ser utilizado em produção, com o [Fl0](http://fl0.com) e o [PostgreSQL](https://www.postgresql.org/). Mas também pode ser utilizado em desenvolvimento, com o [PDM](https://pdm.fming.dev/) e o [SQLite](https://www.sqlite.org/index.html).
 
@@ -83,7 +83,6 @@ Esse projeto utiliza os seguintes pacotes e tecnologias:
 - [drf-spectacular](https://drf-spectacular.readthedocs.io/en/latest/): Pacote para geração de documentação de APIs REST com o Swagger.
 - [gunicon](https://gunicorn.org/): Pacote para servir aplicações Django em produção.
 - [netifaces](https://pypi.org/project/netifaces/): Pacote para obter o endereço IP da máquina.
-- [rest-framework-simplejwt](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/): Pacote para autenticação JWT em APIs REST.
 - [whitenoise](http://whitenoise.evans.io/en/stable/): Pacote para servir arquivos estáticos em aplicações Django.
 
 ## Licença
