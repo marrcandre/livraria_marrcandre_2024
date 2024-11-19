@@ -9,7 +9,7 @@ from .user import User
 class Compra(models.Model):
     class StatusCompra(models.IntegerChoices):
         CARRINHO = 1, "Carrinho"
-        REALIZADO = 2, "Realizado"
+        FINALIZADO = 2, "FINALIZADO"
         PAGO = 3, "Pago"
         ENTREGUE = 4, "Entregue"
 

@@ -78,8 +78,8 @@ class CompraViewSet(ModelViewSet):
                 item.livro.save()
 
             # Após todos os itens serem processados e o estoque ser atualizado,
-            # atualiza o status da compra para 'REALIZADO'.
-            compra.status = Compra.StatusCompra.REALIZADO
+            # atualiza o status da compra para 'FINALIZADO'.
+            compra.status = Compra.StatusCompra.FINALIZADO
             # Salva as alterações da compra no banco de dados.
             compra.save()
 
@@ -93,7 +93,7 @@ class CompraViewSet(ModelViewSet):
         inicio_mes = agora.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
 
         # Filtra as compras realizadas desde o início do mês até o presente momento
-        compras = Compra.objects.filter(status=Compra.StatusCompra.REALIZADO, data__gte=inicio_mes)
+        compras = Compra.objects.filter(status=Compra.StatusCompra.FINALIZADO, data__gte=inicio_mes)
 
         # Calcula o total de vendas e a quantidade de vendas
         total_vendas = sum(compra.total for compra in compras)
