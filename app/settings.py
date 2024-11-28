@@ -120,8 +120,6 @@ if MODE == "DEVELOPMENT":
 else:
     MEDIA_URL = "/media/"
     CLOUDINARY_URL = os.getenv("CLOUDINARY_URL")
-    # STORAGES = "cloudinary_s torage.storage.MediaCloudinaryStorage"
-    # STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
     STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
     STORAGES = {
         "default": {
