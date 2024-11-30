@@ -98,4 +98,3 @@ class CompraAdmin(admin.ModelAdmin):
     ordering = ("usuario", "total", "status")
     list_per_page = 25
     inlines = [ItensCompraInline]
-

@@ -1,3 +1,5 @@
+from django.db.models.aggregates import Sum
+
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import status
 from rest_framework.decorators import action
@@ -71,3 +73,23 @@ class LivroViewSet(ModelViewSet):
         return Response(
             {"status": "Quantidade ajustada com sucesso", "novo_estoque": livro.quantidade}, status=status.HTTP_200_OK
         )
+
+    @action(detail=False, methods=["get"])
+    def mais_vendidos(self, request):
+        """
+        Retorna os livros com mais de 10 unidades vendidas.
+        """
+        # Calcula o total de unidades vendidas para cada livro
+        livros = Livro.objects.annotate(total_vendidos=Sum("itenscompra__quantidade")).filter(total_vendidos__gt=10)
+
+        # Serializa os dados para a resposta
+        data = [
+            {
+                "id": livro.id,
+                "titulo": livro.titulo,
+                "total_vendidos": livro.total_vendidos,
+            }
+            for livro in livros
+        ]
+
+        return Response(data, status=status.HTTP_200_OK)
