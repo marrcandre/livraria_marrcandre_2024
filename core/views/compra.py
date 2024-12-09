@@ -38,7 +38,6 @@ class CompraViewSet(ModelViewSet):
             return CompraListSerializer
         if self.action in ("create", "update"):
             return CompraCreateUpdateSerializer
-
         return CompraSerializer
 
     @action(detail=True, methods=["post"])
