@@ -29,9 +29,13 @@ class Compra(models.Model):
     total = models.DecimalField(max_digits=10, decimal_places=2, default=0)  # Campo total
 
     def save(self, *args, **kwargs):
-        # Atualiza o total antes de salvar
-        self.total = sum(item.preco * item.quantidade for item in self.itens.all())
+        if self.pk:
+            self.total = sum(item.preco * item.quantidade for item in self.itens.all())
         super().save(*args, **kwargs)
+
+    def __str__(self):
+        return f"({self.id}) {self.usuario} {self.get_status_display()} {self.total}"
+
 
 
 class ItensCompra(models.Model):
