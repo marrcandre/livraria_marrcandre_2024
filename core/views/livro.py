@@ -1,5 +1,6 @@
 from django.db.models.aggregates import Sum
 
+from django.shortcuts import get_object_or_404
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import status
 from rest_framework.decorators import action
@@ -7,8 +8,9 @@ from rest_framework.filters import OrderingFilter, SearchFilter
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 
-from core.models import Livro
+from core.models import Compra, ItensCompra, Livro
 from core.serializers import (
+    CompraSerializer,
     LivroAjustarEstoqueSerializer,
     LivroAlterarPrecoSerializer,
     LivroListSerializer,
@@ -93,3 +95,50 @@ class LivroViewSet(ModelViewSet):
         ]
 
         return Response(data, status=status.HTTP_200_OK)
+
+    @action(detail=True, methods=["post"])
+    def adicionar_ao_carrinho(self, request, pk=None):
+        # Obtém o usuário autenticado
+        usuario = request.user
+        if not usuario.is_authenticated:
+            return Response(
+                {"detail": "Autenticação necessária."},
+                status=status.HTTP_401_UNAUTHORIZED,
+            )
+
+        # Obtém o livro pelo ID
+        livro = get_object_or_404(Livro, pk=pk)
+
+        # Tenta buscar ou criar um carrinho para o usuário
+        compra, criada = Compra.objects.get_or_create(
+            usuario=usuario,
+            status=Compra.StatusCompra.CARRINHO,
+            defaults={"tipo_pagamento": Compra.TipoPagamento.CARTAO_CREDITO},
+        )
+
+        # Verifica se o item já existe no carrinho
+        item_existente = compra.itens.filter(livro=livro).first()
+        if item_existente:
+            # Incrementa a quantidade do item existente
+            item_existente.quantidade += 1
+            item_existente.save()
+        else:
+            # Adiciona o novo item no carrinho
+            ItensCompra.objects.create(
+                compra=compra,
+                livro=livro,
+                quantidade=1,
+                preco=livro.preco,
+            )
+
+        # Serializa a compra completa
+        compra_serializada = CompraSerializer(compra)
+
+        # Retorna a resposta com a compra completa
+        return Response(
+            compra_serializada.data,
+            status=status.HTTP_200_OK if not criada else status.HTTP_201_CREATED,
+        )
+
+
+
