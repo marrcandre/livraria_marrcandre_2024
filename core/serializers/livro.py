@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from rest_framework.serializers import (
     DecimalField,
+    IntegerField,
     ModelSerializer,
     Serializer,
     SlugRelatedField,
@@ -23,6 +24,10 @@ class LivroAjustarEstoqueSerializer(serializers.Serializer):
             if nova_quantidade < 0:
                 raise serializers.ValidationError("A quantidade em estoque não pode ser negativa.")
         return value
+
+
+class LivroAdicionarAoCarrinhoSerializer(Serializer):
+    quantidade = IntegerField(default=1, min_value=1)
 
 
 class LivroAlterarPrecoSerializer(Serializer):

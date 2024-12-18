@@ -1,6 +1,6 @@
 from django.db.models.aggregates import Sum
-
 from django.shortcuts import get_object_or_404
+
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import status
 from rest_framework.decorators import action
@@ -11,6 +11,7 @@ from rest_framework.viewsets import ModelViewSet
 from core.models import Compra, ItensCompra, Livro
 from core.serializers import (
     CompraSerializer,
+    LivroAdicionarAoCarrinhoSerializer,
     LivroAjustarEstoqueSerializer,
     LivroAlterarPrecoSerializer,
     LivroListSerializer,
@@ -98,47 +99,29 @@ class LivroViewSet(ModelViewSet):
 
     @action(detail=True, methods=["post"])
     def adicionar_ao_carrinho(self, request, pk=None):
-        # Obtém o usuário autenticado
-        usuario = request.user
-        if not usuario.is_authenticated:
-            return Response(
-                {"detail": "Autenticação necessária."},
-                status=status.HTTP_401_UNAUTHORIZED,
-            )
+        # Busca o livro pelo ID
+        livro = self.get_object()
 
-        # Obtém o livro pelo ID
-        livro = get_object_or_404(Livro, pk=pk)
+        # Valida a quantidade usando o serializer
+        serializer = LivroAdicionarAoCarrinhoSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        quantidade = serializer.validated_data["quantidade"]
 
-        # Tenta buscar ou criar um carrinho para o usuário
-        compra, criada = Compra.objects.get_or_create(
-            usuario=usuario,
-            status=Compra.StatusCompra.CARRINHO,
-            defaults={"tipo_pagamento": Compra.TipoPagamento.CARTAO_CREDITO},
-        )
+        # Verifica se existe uma compra "CARRINHO" para o usuário, cria uma se não existir
+        compra, created = Compra.objects.get_or_create(usuario=request.user, status=Compra.StatusCompra.CARRINHO)
 
-        # Verifica se o item já existe no carrinho
+        # Tenta encontrar um item existente com o mesmo livro
         item_existente = compra.itens.filter(livro=livro).first()
+
         if item_existente:
-            # Incrementa a quantidade do item existente
-            item_existente.quantidade += 1
+            # Incrementa a quantidade se o item já existe
+            item_existente.quantidade += quantidade
+            item_existente.preco = livro.preco  # Garante que o preço está atualizado
             item_existente.save()
         else:
-            # Adiciona o novo item no carrinho
-            ItensCompra.objects.create(
-                compra=compra,
-                livro=livro,
-                quantidade=1,
-                preco=livro.preco,
-            )
+            # Cria um novo item no carrinho
+            ItensCompra.objects.create(compra=compra, livro=livro, quantidade=quantidade, preco=livro.preco)
 
-        # Serializa a compra completa
+        # Retorna a compra completa com o carrinho atualizado
         compra_serializada = CompraSerializer(compra)
-
-        # Retorna a resposta com a compra completa
-        return Response(
-            compra_serializada.data,
-            status=status.HTTP_200_OK if not criada else status.HTTP_201_CREATED,
-        )
-
-
-
+        return Response(compra_serializada.data, status=status.HTTP_200_OK)

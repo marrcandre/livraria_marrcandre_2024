@@ -26,7 +26,7 @@ class Compra(models.Model):
     status = models.IntegerField(choices=StatusCompra.choices, default=StatusCompra.CARRINHO)
     tipo_pagamento = models.IntegerField(choices=TipoPagamento.choices, default=TipoPagamento.CARTAO_CREDITO)
     data = models.DateTimeField(auto_now_add=True)
-    total = models.DecimalField(max_digits=10, decimal_places=2, default=0)  # Campo total
+    total = models.DecimalField(max_digits=10, decimal_places=2, default=0)
 
     def save(self, *args, **kwargs):
         if self.pk:
@@ -35,7 +35,6 @@ class Compra(models.Model):
 
     def __str__(self):
         return f"({self.id}) {self.usuario} {self.get_status_display()} {self.total}"
-
 
 
 class ItensCompra(models.Model):

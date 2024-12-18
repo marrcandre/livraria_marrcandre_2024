@@ -93,6 +93,7 @@ class ItensCompraInline(admin.StackedInline):  # Ou use TabularInline
 @admin.register(Compra)
 class CompraAdmin(admin.ModelAdmin):
     list_display = ("id", "usuario", "status", "total")
+    readonly_fields = ("data",)
     search_fields = ("usuario", "status")
     list_filter = ("usuario", "status")
     ordering = ("status", "usuario", "data", "total")
