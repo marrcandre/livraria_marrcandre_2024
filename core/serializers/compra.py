@@ -3,12 +3,15 @@ from rest_framework.serializers import (
     CurrentUserDefault,
     DateTimeField,
     HiddenField,
+    IntegerField,
     ModelSerializer,
+    PrimaryKeyRelatedField,
     SerializerMethodField,
     ValidationError,
 )
 
-from core.models import Compra, ItensCompra
+from core.models import Compra, ItensCompra, Livro
+from core.serializers.livro import Serializer
 
 
 class ItensCompraCreateUpdateSerializer(ModelSerializer):
@@ -109,3 +112,13 @@ class CompraSerializer(ModelSerializer):
     class Meta:
         model = Compra
         fields = ("id", "usuario", "status", "total", "data", "tipo_pagamento", "itens")  # modificado
+
+
+class CompraAdicionarLivroAoCarrinhoSerializer(Serializer):
+    livro_id = PrimaryKeyRelatedField(queryset=Livro.objects.all())
+    quantidade = IntegerField(min_value=1, default=1)
+
+    def validate(self, data):
+        if data["quantidade"] > data["livro_id"].quantidade:
+            raise ValidationError({"quantidade": "Quantidade solicitada não disponível em estoque."})
+        return data

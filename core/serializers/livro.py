@@ -17,7 +17,6 @@ class LivroAjustarEstoqueSerializer(serializers.Serializer):
     quantidade = serializers.IntegerField()
 
     def validate_quantidade(self, value):
-        # Acessa o objeto livro no contexto do serializer
         livro = self.context.get("livro")
         if livro:
             nova_quantidade = livro.quantidade + value
@@ -28,6 +27,14 @@ class LivroAjustarEstoqueSerializer(serializers.Serializer):
 
 class LivroAdicionarAoCarrinhoSerializer(Serializer):
     quantidade = IntegerField(default=1, min_value=1)
+
+    def validate(self, data):
+        livro = self.context.get("livro")
+        if not livro:
+            raise ValidationError("Livro não fornecido no contexto.")
+        if data["quantidade"] > livro.quantidade:
+            raise ValidationError("Quantidade solicitada não disponível em estoque.")
+        return data
 
 
 class LivroAlterarPrecoSerializer(Serializer):
@@ -61,9 +68,9 @@ class LivroSerializer(ModelSerializer):
         queryset=Image.objects.all(),
         slug_field="attachment_key",
         required=False,
-        write_only=True,  # Não será exibido na resposta
+        write_only=True,
     )
-    capa = ImageSerializer(required=False, read_only=True)  # Não será usado para criar ou atualizar
+    capa = ImageSerializer(required=False, read_only=True)
 
     class Meta:
         model = Livro

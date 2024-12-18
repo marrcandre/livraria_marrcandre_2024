@@ -10,7 +10,9 @@ from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 
 from core.models import Compra, User
+from core.models.compra import ItensCompra
 from core.serializers import (
+    CompraAdicionarLivroAoCarrinhoSerializer,
     CompraCreateUpdateSerializer,
     CompraListSerializer,
     CompraSerializer,
@@ -89,4 +91,44 @@ class CompraViewSet(ModelViewSet):
                 "quantidade_vendas": quantidade_vendas,
             },
             status=status.HTTP_200_OK,
+        )
+
+    @action(detail=False, methods=["post"])
+    def adicionar_ao_carrinho(self, request):
+        serializer = CompraAdicionarLivroAoCarrinhoSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        livro = serializer.validated_data["livro_id"]
+        quantidade = serializer.validated_data["quantidade"]
+        usuario = request.user
+
+        if not usuario.is_authenticated:
+            return Response(
+                {"detail": "Autenticação necessária."},
+                status=status.HTTP_401_UNAUTHORIZED,
+            )
+
+        compra, criada = Compra.objects.get_or_create(
+            usuario=usuario,
+            status=Compra.StatusCompra.CARRINHO,
+            defaults={"tipo_pagamento": Compra.TipoPagamento.CARTAO_CREDITO},
+        )
+
+        item_existente = compra.itens.filter(livro=livro).first()
+        if item_existente:
+            item_existente.quantidade += quantidade
+            item_existente.save()
+        else:
+            ItensCompra.objects.create(
+                compra=compra,
+                livro=livro,
+                quantidade=quantidade,
+                preco=livro.preco,
+            )
+
+        compra_serializada = CompraSerializer(compra)
+
+        return Response(
+            compra_serializada.data,
+            status=status.HTTP_200_OK if not criada else status.HTTP_201_CREATED,
         )

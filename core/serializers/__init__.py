@@ -1,6 +1,7 @@
 from .autor import AutorSerializer
 from .categoria import CategoriaSerializer
 from .compra import (
+    CompraAdicionarLivroAoCarrinhoSerializer,
     CompraCreateUpdateSerializer,
     CompraListSerializer,
     CompraSerializer,
