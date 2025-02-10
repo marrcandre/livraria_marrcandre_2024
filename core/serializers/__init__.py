@@ -10,6 +10,7 @@ from .compra import (
     ItensCompraSerializer,
 )
 from .editora import EditoraSerializer
+from .favorito import FavoritoSerializer, FavoritoDetailSerializer
 from .livro import (
     LivroAdicionarAoCarrinhoSerializer,
     LivroAjustarEstoqueSerializer,
