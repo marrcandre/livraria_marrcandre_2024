@@ -112,9 +112,9 @@ class CompraAdmin(admin.ModelAdmin):
 
 @admin.register(Favorito)
 class FavoritoAdmin(admin.ModelAdmin):
-    list_display = ("usuario", "livro", "nota", "data_cadastro")
+    list_display = ("usuario", "livro", "nota", "data_atualizacao")
     search_fields = ("usuario__email", "livro__titulo", "comentario")
-    list_filter = ("nota", "data_cadastro")
-    ordering = ("-data_cadastro",)
+    list_filter = ("nota", "data_atualizacao")
+    ordering = ("-data_atualizacao",)
     list_per_page = 25
-    readonly_fields = ("data_cadastro",)
+    readonly_fields = ("data_atualizacao",)
