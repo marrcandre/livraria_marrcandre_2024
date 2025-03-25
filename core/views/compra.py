@@ -20,37 +20,37 @@ from core.serializers import (
 
 class CompraViewSet(ModelViewSet):
     filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
-    filterset_fields = ["usuario__email", "status", "data"]
-    search_fields = ["usuario__email"]
-    ordering_fields = ["usuario__email", "status", "data"]
-    ordering = ["-data"]
+    filterset_fields = ['usuario__email', 'status', 'data']
+    search_fields = ['usuario__email']
+    ordering_fields = ['usuario__email', 'status', 'data']
+    ordering = ['-data']
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         usuario = self.request.user
         if usuario.is_superuser:
-            return Compra.objects.order_by("-id")
-        if usuario.groups.filter(name="administradores"):
-            return Compra.objects.order_by("-id")
+            return Compra.objects.order_by('-id')
+        if usuario.groups.filter(name='administradores'):
+            return Compra.objects.order_by('-id')
         if usuario.tipo_usuario == User.TipoUsuario.GERENTE:
-            return Compra.objects.order_by("-id")
+            return Compra.objects.order_by('-id')
         return Compra.objects.filter(usuario=usuario)
 
     def get_serializer_class(self):
-        if self.action == "list":
+        if self.action == 'list':
             return CompraListSerializer
-        if self.action in ("create", "update"):
+        if self.action in {'create', 'update'}:
             return CompraCreateUpdateSerializer
         return CompraSerializer
 
-    @action(detail=True, methods=["post"])
+    @action(detail=True, methods=['post'])
     def finalizar(self, request, pk=None):
         compra = self.get_object()
 
         if compra.status != Compra.StatusCompra.CARRINHO:
             return Response(
                 status=status.HTTP_400_BAD_REQUEST,
-                data={"status": "Compra já finalizada"},
+                data={'status': 'Compra já finalizada'},
             )
 
         with transaction.atomic():
@@ -59,9 +59,9 @@ class CompraViewSet(ModelViewSet):
                     return Response(
                         status=status.HTTP_400_BAD_REQUEST,
                         data={
-                            "status": "Quantidade insuficiente",
-                            "livro": item.livro.titulo,
-                            "quantidade_disponivel": item.livro.quantidade,
+                            'status': 'Quantidade insuficiente',
+                            'livro': item.livro.titulo,
+                            'quantidade_disponivel': item.livro.quantidade,
                         },
                     )
 
@@ -71,9 +71,9 @@ class CompraViewSet(ModelViewSet):
             compra.status = Compra.StatusCompra.FINALIZADO
             compra.save()
 
-        return Response(status=status.HTTP_200_OK, data={"status": "Compra finalizada"})
+        return Response(status=status.HTTP_200_OK, data={'status': 'Compra finalizada'})
 
-    @action(detail=False, methods=["get"])
+    @action(detail=False, methods=['get'])
     def relatorio_vendas_mes(self, request):
         agora = timezone.now()
         inicio_mes = agora.replace(day=1, hour=0, minute=0, second=0, microsecond=0)
@@ -85,32 +85,32 @@ class CompraViewSet(ModelViewSet):
 
         return Response(
             {
-                "status": "Relatório de vendas deste mês",
-                "total_vendas": total_vendas,
-                "quantidade_vendas": quantidade_vendas,
+                'status': 'Relatório de vendas deste mês',
+                'total_vendas': total_vendas,
+                'quantidade_vendas': quantidade_vendas,
             },
             status=status.HTTP_200_OK,
         )
 
-    @action(detail=False, methods=["post"])
+    @action(detail=False, methods=['post'])
     def adicionar_ao_carrinho(self, request):
         serializer = CompraAdicionarLivroAoCarrinhoSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
 
-        livro = serializer.validated_data["livro_id"]
-        quantidade = serializer.validated_data["quantidade"]
+        livro = serializer.validated_data['livro_id']
+        quantidade = serializer.validated_data['quantidade']
         usuario = request.user
 
         if not usuario.is_authenticated:
             return Response(
-                {"detail": "Autenticação necessária."},
+                {'detail': 'Autenticação necessária.'},
                 status=status.HTTP_401_UNAUTHORIZED,
             )
 
         compra, criada = Compra.objects.get_or_create(
             usuario=usuario,
             status=Compra.StatusCompra.CARRINHO,
-            defaults={"tipo_pagamento": Compra.TipoPagamento.CARTAO_CREDITO},
+            defaults={'tipo_pagamento': Compra.TipoPagamento.CARTAO_CREDITO},
         )
 
         item_existente = compra.itens.filter(livro=livro).first()

@@ -19,7 +19,7 @@ class FavoritoViewSet(ModelViewSet):
         return self.queryset.filter(usuario=self.request.user)
 
     def get_serializer_class(self):
-        if self.action == "list":
+        if self.action == 'list':
             return FavoritoDetailSerializer
         return FavoritoSerializer
 
@@ -27,7 +27,7 @@ class FavoritoViewSet(ModelViewSet):
         # Automaticamente define o usuário como o usuário logado
         serializer.save(usuario=self.request.user)
 
-    @action(detail=False, methods=["get"])
+    @action(detail=False, methods=['get'])
     def livros_com_estatisticas(self, request):
         # Retorna apenas os livros que têm favoritos
         livros = Livro.objects.filter(favoritos__isnull=False).distinct()

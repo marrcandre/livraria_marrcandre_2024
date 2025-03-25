@@ -7,9 +7,9 @@ from uploader.serializers import ImageSerializer
 
 class UserSerializer(ModelSerializer):
     foto_attachment_key = SlugRelatedField(
-        source="foto",
+        source='foto',
         queryset=Image.objects.all(),
-        slug_field="attachment_key",
+        slug_field='attachment_key',
         required=False,
         write_only=True,
     )
@@ -18,5 +18,5 @@ class UserSerializer(ModelSerializer):
 
     class Meta:
         model = User
-        fields = "__all__"
+        fields = '__all__'
         depth = 1

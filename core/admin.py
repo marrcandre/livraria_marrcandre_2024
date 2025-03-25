@@ -22,39 +22,39 @@ from core.models import (
 class UserAdmin(BaseUserAdmin):
     """Define the admin pages for users."""
 
-    ordering = ["id"]
-    list_display = ["email", "name"]
+    ordering = ['id']
+    list_display = ['email', 'name']
     fieldsets = (
-        (None, {"fields": ("email", "password")}),
-        (_("Personal Info"), {"fields": ("name", "foto", "tipo_usuario", "passage_id")}),
+        (None, {'fields': ('email', 'password')}),
+        (_('Personal Info'), {'fields': ('name', 'foto', 'tipo_usuario', 'passage_id')}),
         (
-            _("Permissions"),
+            _('Permissions'),
             {
-                "fields": (
-                    "is_active",
-                    "is_staff",
-                    "is_superuser",
+                'fields': (
+                    'is_active',
+                    'is_staff',
+                    'is_superuser',
                 )
             },
         ),
-        (_("Important dates"), {"fields": ("last_login",)}),
-        (_("Groups"), {"fields": ("groups",)}),
-        (_("User Permissions"), {"fields": ("user_permissions",)}),
+        (_('Important dates'), {'fields': ('last_login',)}),
+        (_('Groups'), {'fields': ('groups',)}),
+        (_('User Permissions'), {'fields': ('user_permissions',)}),
     )
-    readonly_fields = ["last_login"]
+    readonly_fields = ['last_login']
     add_fieldsets = (
         (
             None,
             {
-                "classes": ("wide",),
-                "fields": (
-                    "email",
-                    "password1",
-                    "password2",
-                    "name",
-                    "is_active",
-                    "is_staff",
-                    "is_superuser",
+                'classes': ('wide',),
+                'fields': (
+                    'email',
+                    'password1',
+                    'password2',
+                    'name',
+                    'is_active',
+                    'is_staff',
+                    'is_superuser',
                 ),
             },
         ),
@@ -63,34 +63,34 @@ class UserAdmin(BaseUserAdmin):
 
 @admin.register(Autor)
 class AutorAdmin(admin.ModelAdmin):
-    list_display = ("nome", "email")
-    search_fields = ("nome", "email")
-    list_filter = ("nome",)
-    ordering = ("nome", "email")
+    list_display = ('nome', 'email')
+    search_fields = ('nome', 'email')
+    list_filter = ('nome',)
+    ordering = ('nome', 'email')
 
 
 @admin.register(Categoria)
 class CategoriaAdmin(admin.ModelAdmin):
-    list_display = ("descricao",)
-    search_fields = ("descricao",)
-    list_filter = ("descricao",)
-    ordering = ("descricao",)
+    list_display = ('descricao',)
+    search_fields = ('descricao',)
+    list_filter = ('descricao',)
+    ordering = ('descricao',)
 
 
 @admin.register(Editora)
 class EditoraAdmin(admin.ModelAdmin):
-    list_display = ("nome",)
-    search_fields = ("nome",)
-    list_filter = ("nome",)
-    ordering = ("nome",)
+    list_display = ('nome',)
+    search_fields = ('nome',)
+    list_filter = ('nome',)
+    ordering = ('nome',)
 
 
 @admin.register(Livro)
 class LivroAdmin(admin.ModelAdmin):
-    list_display = ("titulo", "editora", "categoria")
-    search_fields = ("titulo", "editora__nome", "categoria__descricao")
-    list_filter = ("editora", "categoria")
-    ordering = ("titulo", "editora", "categoria")
+    list_display = ('titulo', 'editora', 'categoria')
+    search_fields = ('titulo', 'editora__nome', 'categoria__descricao')
+    list_filter = ('editora', 'categoria')
+    ordering = ('titulo', 'editora', 'categoria')
     list_per_page = 25
 
 
@@ -101,20 +101,20 @@ class ItensCompraInline(admin.StackedInline):  # Ou use TabularInline
 
 @admin.register(Compra)
 class CompraAdmin(admin.ModelAdmin):
-    list_display = ("id", "usuario", "status", "total")
-    readonly_fields = ("data",)
-    search_fields = ("usuario", "status")
-    list_filter = ("usuario", "status")
-    ordering = ("status", "usuario", "data", "total")
+    list_display = ('id', 'usuario', 'status', 'total')
+    readonly_fields = ('data',)
+    search_fields = ('usuario', 'status')
+    list_filter = ('usuario', 'status')
+    ordering = ('status', 'usuario', 'data', 'total')
     list_per_page = 25
     inlines = [ItensCompraInline]
 
 
 @admin.register(Favorito)
 class FavoritoAdmin(admin.ModelAdmin):
-    list_display = ("usuario", "livro", "nota", "data_atualizacao")
-    search_fields = ("usuario__email", "livro__titulo", "comentario")
-    list_filter = ("nota", "data_atualizacao")
-    ordering = ("-data_atualizacao",)
+    list_display = ('usuario', 'livro', 'nota', 'data_atualizacao')
+    search_fields = ('usuario__email', 'livro__titulo', 'comentario')
+    list_filter = ('nota', 'data_atualizacao')
+    ordering = ('-data_atualizacao',)
     list_per_page = 25
-    readonly_fields = ("data_atualizacao",)
+    readonly_fields = ('data_atualizacao',)

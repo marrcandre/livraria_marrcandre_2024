@@ -39,13 +39,12 @@ without-hashes = "true"
 
 [tool.ruff]
 line-length = 120
-extend-exclude = ['migrations', '__init__.py']
+extend-exclude = ['migrations', '__init__.py', 'manage.py']
 
 [tool.ruff.lint]
 preview = true
 select = ['I', 'F', 'E', 'W', 'PL', 'PT']
 ignore = ["PLR6301"]
-
 
 [tool.ruff.format]
 preview = true
@@ -69,8 +68,4 @@ pre_format = "ruff check --fix"
 format = "ruff format"
 
 [dependency-groups]
-dev = [
-  "pylint>=3.0.2",
-  "ipython>=8.26.0",
-  "ruff>=0.11.2",
-]
+dev = ["pylint>=3.0.2", "ipython>=8.26.0", "ruff>=0.11.2"]

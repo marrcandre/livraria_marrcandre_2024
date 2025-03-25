@@ -5,5 +5,5 @@ from core.serializers import AutorSerializer
 
 
 class AutorViewSet(ModelViewSet):
-    queryset = Autor.objects.order_by("-id")
+    queryset = Autor.objects.order_by('-id')
     serializer_class = AutorSerializer

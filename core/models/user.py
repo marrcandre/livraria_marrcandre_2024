@@ -21,7 +21,7 @@ class UserManager(BaseUserManager):
     def create_user(self, email, password=None, **extra_fields):
         """Create, save and return a new user."""
         if not email:
-            raise ValueError("Users must have an email address.")
+            raise ValueError('Users must have an email address.')
 
         user = self.model(email=self.normalize_email(email), **extra_fields)
         user.set_password(password)
@@ -43,9 +43,9 @@ class User(AbstractBaseUser, PermissionsMixin):
     """User model in the system."""
 
     class TipoUsuario(models.IntegerChoices):
-        CLIENTE = 1, "Cliente"
-        VENDEDOR = 2, "Vendedor"
-        GERENTE = 3, "Gerente"
+        CLIENTE = 1, 'Cliente'
+        VENDEDOR = 2, 'Vendedor'
+        GERENTE = 3, 'Gerente'
 
     passage_id = models.CharField(max_length=255, unique=True)
     email = models.EmailField(max_length=255, unique=True)
@@ -53,13 +53,13 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     foto = models.ForeignKey(Image, on_delete=models.SET_NULL, null=True, blank=True, default=None)
-    tipo_usuario = models.IntegerField(_("User Type"), choices=TipoUsuario.choices, default=TipoUsuario.CLIENTE)
+    tipo_usuario = models.IntegerField(_('User Type'), choices=TipoUsuario.choices, default=TipoUsuario.CLIENTE)
 
     objects = UserManager()
 
-    USERNAME_FIELD = "email"
+    USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
 
     class Meta:
-        verbose_name = "Usuário"
-        verbose_name_plural = "Usuários"
+        verbose_name = 'Usuário'
+        verbose_name_plural = 'Usuários'

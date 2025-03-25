@@ -20,22 +20,22 @@ from core.serializers import (
 
 
 class LivroViewSet(ModelViewSet):
-    queryset = Livro.objects.order_by("-id")
+    queryset = Livro.objects.order_by('-id')
     filter_backends = [DjangoFilterBackend, OrderingFilter, SearchFilter]
-    filterset_fields = ["categoria__descricao", "editora__nome"]
-    search_fields = ["titulo"]
-    ordering_fields = ["titulo", "preco"]
-    ordering = ["titulo"]
+    filterset_fields = ['categoria__descricao', 'editora__nome']
+    search_fields = ['titulo']
+    ordering_fields = ['titulo', 'preco']
+    ordering = ['titulo']
 
     def get_serializer_class(self):
-        if self.action == "list":
+        if self.action == 'list':
             return LivroListSerializer
-        elif self.action == "retrieve":
+        elif self.action == 'retrieve':
             return LivroRetrieveSerializer
 
         return LivroSerializer
 
-    @action(detail=True, methods=["patch"])
+    @action(detail=True, methods=['patch'])
     def alterar_preco(self, request, pk=None):
         livro = self.get_object()
 
@@ -43,54 +43,54 @@ class LivroViewSet(ModelViewSet):
 
         serializer.is_valid(raise_exception=True)
 
-        livro.preco = serializer.validated_data["preco"]
+        livro.preco = serializer.validated_data['preco']
         livro.save()
 
         return Response(
-            {"detail": f"Preço do livro '{livro.titulo}' atualizado para {livro.preco}."}, status=status.HTTP_200_OK
+            {'detail': f"Preço do livro '{livro.titulo}' atualizado para {livro.preco}."}, status=status.HTTP_200_OK
         )
 
-    @action(detail=True, methods=["post"])
+    @action(detail=True, methods=['post'])
     def ajustar_estoque(self, request, pk=None):
         livro = self.get_object()
 
-        serializer = LivroAjustarEstoqueSerializer(data=request.data, context={"livro": livro})
+        serializer = LivroAjustarEstoqueSerializer(data=request.data, context={'livro': livro})
         serializer.is_valid(raise_exception=True)
 
-        quantidade_ajuste = serializer.validated_data["quantidade"]
+        quantidade_ajuste = serializer.validated_data['quantidade']
 
         livro.quantidade += quantidade_ajuste
         livro.save()
 
         return Response(
-            {"status": "Quantidade ajustada com sucesso", "novo_estoque": livro.quantidade}, status=status.HTTP_200_OK
+            {'status': 'Quantidade ajustada com sucesso', 'novo_estoque': livro.quantidade}, status=status.HTTP_200_OK
         )
 
-    @action(detail=False, methods=["get"])
+    @action(detail=False, methods=['get'])
     def mais_vendidos(self, request):
         """
         Retorna os livros com mais de 10 unidades vendidas.
         """
-        livros = Livro.objects.annotate(total_vendidos=Sum("itenscompra__quantidade")).filter(total_vendidos__gt=10)
+        livros = Livro.objects.annotate(total_vendidos=Sum('itenscompra__quantidade')).filter(total_vendidos__gt=10)
 
         data = [
             {
-                "id": livro.id,
-                "titulo": livro.titulo,
-                "total_vendidos": livro.total_vendidos,
+                'id': livro.id,
+                'titulo': livro.titulo,
+                'total_vendidos': livro.total_vendidos,
             }
             for livro in livros
         ]
 
         return Response(data, status=status.HTTP_200_OK)
 
-    @action(detail=True, methods=["post"])
+    @action(detail=True, methods=['post'])
     def adicionar_ao_carrinho(self, request, pk=None):
         livro = self.get_object()
 
-        serializer = LivroAdicionarAoCarrinhoSerializer(data=request.data, context={"livro": livro})
+        serializer = LivroAdicionarAoCarrinhoSerializer(data=request.data, context={'livro': livro})
         serializer.is_valid(raise_exception=True)
-        quantidade = serializer.validated_data["quantidade"]
+        quantidade = serializer.validated_data['quantidade']
 
         compra, created = Compra.objects.get_or_create(usuario=request.user, status=Compra.StatusCompra.CARRINHO)
 
@@ -106,7 +106,7 @@ class LivroViewSet(ModelViewSet):
         compra_serializada = CompraSerializer(compra)
         return Response(compra_serializada.data, status=status.HTTP_200_OK)
 
-    @action(detail=True, methods=["post", "put", "patch"])
+    @action(detail=True, methods=['post', 'put', 'patch'])
     def favoritar(self, request, pk=None):
         """
         Favorita um livro ou atualiza os dados (nota e/ou comentário) de um favorito existente.
@@ -114,26 +114,17 @@ class LivroViewSet(ModelViewSet):
         livro = self.get_object()
         favorito = Favorito.objects.filter(usuario=request.user, livro=livro).first()
 
-        if not favorito and request.method in ["PUT", "PATCH"]:
-            return Response(
-                {"error": "Livro não está na sua lista de favoritos"},
-                status=status.HTTP_404_NOT_FOUND
-            )
+        if not favorito and request.method in {'PUT', 'PATCH'}:
+            return Response({'error': 'Livro não está na sua lista de favoritos'}, status=status.HTTP_404_NOT_FOUND)
 
         if favorito:
             # Atualiza favorito existente
             serializer = FavoritoSerializer(
-                favorito,
-                data=request.data,
-                partial=True,
-                context={"livro": livro, "usuario": request.user}
+                favorito, data=request.data, partial=True, context={'livro': livro, 'usuario': request.user}
             )
         else:
             # Cria novo favorito
-            serializer = FavoritoSerializer(
-                data=request.data,
-                context={"livro": livro, "usuario": request.user}
-            )
+            serializer = FavoritoSerializer(data=request.data, context={'livro': livro, 'usuario': request.user})
 
         serializer.is_valid(raise_exception=True)
         serializer.save()

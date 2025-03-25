@@ -5,5 +5,5 @@ from core.serializers import EditoraSerializer
 
 
 class EditoraViewSet(ModelViewSet):
-    queryset = Editora.objects.order_by("-id")
+    queryset = Editora.objects.order_by('-id')
     serializer_class = EditoraSerializer
