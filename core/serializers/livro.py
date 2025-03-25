@@ -1,9 +1,9 @@
-from rest_framework.serializers import SerializerMethodField, Serializer, ModelSerializer
 from rest_framework.serializers import (
     DecimalField,
     IntegerField,
     ModelSerializer,
     Serializer,
+    SerializerMethodField,
     SlugRelatedField,
     ValidationError,
 )

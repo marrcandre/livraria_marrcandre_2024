@@ -1,6 +1,4 @@
 from django.db.models.aggregates import Sum
-from django.shortcuts import get_object_or_404
-
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import status
 from rest_framework.decorators import action
@@ -8,11 +6,10 @@ from rest_framework.filters import OrderingFilter, SearchFilter
 from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 
-from core.models import Compra, ItensCompra, Livro, Favorito
+from core.models import Compra, Favorito, ItensCompra, Livro
 from core.serializers import (
     CompraSerializer,
     FavoritoSerializer,
-    FavoritoDetailSerializer,
     LivroAdicionarAoCarrinhoSerializer,
     LivroAjustarEstoqueSerializer,
     LivroAlterarPrecoSerializer,
@@ -116,13 +113,13 @@ class LivroViewSet(ModelViewSet):
         """
         livro = self.get_object()
         favorito = Favorito.objects.filter(usuario=request.user, livro=livro).first()
-        
+
         if not favorito and request.method in ["PUT", "PATCH"]:
             return Response(
-                {"error": "Livro não está na sua lista de favoritos"}, 
+                {"error": "Livro não está na sua lista de favoritos"},
                 status=status.HTTP_404_NOT_FOUND
             )
-            
+
         if favorito:
             # Atualiza favorito existente
             serializer = FavoritoSerializer(
@@ -137,9 +134,9 @@ class LivroViewSet(ModelViewSet):
                 data=request.data,
                 context={"livro": livro, "usuario": request.user}
             )
-            
+
         serializer.is_valid(raise_exception=True)
         serializer.save()
-        
+
         status_code = status.HTTP_200_OK if favorito else status.HTTP_201_CREATED
         return Response(serializer.data, status=status_code)
