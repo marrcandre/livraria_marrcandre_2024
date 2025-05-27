@@ -1,4 +1,3841 @@
+MODE = 'DEVELOPMENT' 
+MEDIA_URL = 'http://191.52.55.236:19003/media/' 
+DATABASES = {'default': {'NAME': 'postgres', 'USER': 'postgres.kfjxquvsjldesrrjqgzo', 'PASSWORD': 'na5VoelX8JmiJkwc', 'HOST': 'aws-0-sa-east-1.pooler.supabase.com', 'PORT': 6543, 'CONN_MAX_AGE': 600, 'CONN_HEALTH_CHECKS': True, 'DISABLE_SERVER_SIDE_CURSORS': False, 'ENGINE': 'django.db.backends.postgresql'}}
 [
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2025-05-23T17:30:29.507Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "355",
+    "object_repr": "(355) NIKOLAI GOGOL ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2025-05-23T17:31:11.216Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "356",
+    "object_repr": "(356) NIKOLAI GOGOL ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2025-05-23T17:33:18.614Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "86",
+    "object_repr": "(86) Literatura russa",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2025-05-23T17:33:33.242Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "53",
+    "object_repr": " - 4a1de899-9f0f-470e-b245-d81ab01af35a",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2025-05-23T17:33:47.424Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "53",
+    "object_repr": " - 4a1de899-9f0f-470e-b245-d81ab01af35a",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2025-05-23T17:34:07.177Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "53",
+    "object_repr": " - 4a1de899-9f0f-470e-b245-d81ab01af35a",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2025-05-23T17:34:55.436Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "700",
+    "object_repr": "(700) O Capote e Outras Novelas (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2025-05-23T17:35:09.827Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "54",
+    "object_repr": " - e131fb8d-be51-494c-bc4a-a239a457eb94",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2025-05-23T17:35:20.882Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "701",
+    "object_repr": "(701) Estilhaça-me (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2025-05-23T17:37:19.019Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "55",
+    "object_repr": " - fb2ca996-4169-40b6-831a-f871ceed8caf",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2025-05-23T17:37:22.042Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "702",
+    "object_repr": "(702) o diário de uma princesa desastrada: Um romance: 1 (2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2025-05-23T17:39:06.350Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "56",
+    "object_repr": " - 7bed1754-cbd2-4daf-9dde-5a27f8ca706d",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2025-05-23T17:39:16.390Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "703",
+    "object_repr": "(703) o diário de uma princesa desastrada 2: O segredo das flores (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2025-05-23T17:40:13.382Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "57",
+    "object_repr": " - 366a899b-acf8-4da8-b506-d3ee31c26e51",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2025-05-23T17:40:16.156Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "704",
+    "object_repr": "(704) o diário de uma princesa desastrada 3: A maldição das princesas (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2025-05-23T17:41:05.979Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "58",
+    "object_repr": " - 41e5904d-4790-427a-9f59-3d70b363f557",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2025-05-23T17:41:06.318Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "705",
+    "object_repr": "(705) Memorias do Subsolo (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2025-05-23T17:41:07.737Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "706",
+    "object_repr": "(706) O caderno de maldades do Scorpio (2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2025-05-23T17:42:24.982Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "707",
+    "object_repr": "(707) Noites Brancas (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2025-05-23T17:43:15.554Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "59",
+    "object_repr": " - be93f47b-793d-4e0b-8225-1e083485b852",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-05-23T17:43:17.370Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "708",
+    "object_repr": "(708) snoopy 1 – e sua Turma (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-05-23T17:43:53.004Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "357",
+    "object_repr": "(357) Tobias Mueller ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-05-23T17:44:13.609Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "204",
+    "object_repr": "(204) Lulu.com",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2025-05-23T17:44:54.884Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "60",
+    "object_repr": " - aa9beb71-7fc7-4f66-911d-7ec49090f160",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2025-05-23T17:44:57.979Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "709",
+    "object_repr": "(709) snoopy 8 – no Mundo da Lua! (Volume 8) (6)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2025-05-23T17:45:08.127Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "87",
+    "object_repr": "(87) informatica",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2025-05-23T17:45:11.175Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "710",
+    "object_repr": "(710) Lorem Ipsum (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2025-05-23T17:45:18.991Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "358",
+    "object_repr": "(358) Akira Toriyama ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2025-05-23T17:46:02.424Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "61",
+    "object_repr": " - 3b801100-c6fe-42de-a9e7-0812ed9d5b0d",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2025-05-23T17:46:03.827Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "711",
+    "object_repr": "(711) peanuts Completo: 1957 a 1958 - Vol. 4 Brochura (9)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2025-05-23T17:47:40.126Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "62",
+    "object_repr": " - c3d3e605-d04b-4dbe-9dda-0c4ec5343a01",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2025-05-23T17:47:41.563Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "712",
+    "object_repr": "(712) liberta-me (Estilhaça-me) (100)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2025-05-23T17:47:43.493Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "359",
+    "object_repr": "(359) C.J Tudor ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2025-05-23T17:48:01.918Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "713",
+    "object_repr": "(713) O Homem de Giz (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2025-05-23T17:48:04.053Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "63",
+    "object_repr": "dragon-ball-vol.1 - 1520a53a-a72b-44cb-a8a3-9da94247dfe2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2025-05-23T17:48:32.062Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "714",
+    "object_repr": "(714) Dragon Ball Super, Vol. 1: Volume 1 (10000)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2025-05-23T17:49:16.950Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "64",
+    "object_repr": " - 848b510c-05a4-4cd8-a44e-31eb06ec07c9",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2025-05-23T17:49:18.687Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "715",
+    "object_repr": "(715) morri para viver (50)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2025-05-23T17:54:39.301Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "65",
+    "object_repr": "dragon-ball-vol.2 - ef3a94b4-573f-4745-8d0a-6d51864ab833",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2025-05-23T17:54:44.885Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "716",
+    "object_repr": "(716) Dragon Ball Super, Vol. 2: The Winning Universe Is Decided! (100)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2025-05-23T17:55:48.649Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "360",
+    "object_repr": "(360) Ailton Krenak ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2025-05-23T17:55:56.035Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "717",
+    "object_repr": "(717) A Vida não é Útil (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2025-05-23T17:57:57.791Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "205",
+    "object_repr": "(205) Atica",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2025-05-23T17:58:13.230Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "361",
+    "object_repr": "(361) Carolina Maria de Jesus ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2025-05-23T17:58:15.159Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "718",
+    "object_repr": "(718) Quarto de Despejo - Diário de uma Favelada (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2025-05-23T18:05:52.007Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "88",
+    "object_repr": "(88) Fantasia Romântica",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2025-05-23T18:07:30.565Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "719",
+    "object_repr": "(719) Tempestade de Ônix: Sequência dos fenômenos mundiais Quarta Asa e Chama de Ferro (0)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2025-05-23T18:09:36.235Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "66",
+    "object_repr": "tempestade onix - 353690b8-1ae2-43e2-80a3-a300d6afc3a4",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2025-05-23T18:09:39.408Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "664",
+    "object_repr": "(664) Império de Tempestades (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Capa\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2025-05-23T18:12:19.725Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "720",
+    "object_repr": "(720) Crítica da Razão Prática (30)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2025-05-23T18:14:40.526Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "721",
+    "object_repr": "(721) A serpente e as asas feitas de noite (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2025-05-23T18:16:19.600Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "206",
+    "object_repr": "(206) Edições 70",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2025-05-23T18:16:28.933Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "67",
+    "object_repr": "tempestade onix - 85fab27e-10b6-40d5-b086-2869dff22f3b",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2025-05-23T18:16:31.018Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "719",
+    "object_repr": "(719) Tempestade de Ônix: Sequência dos fenômenos mundiais Quarta Asa e Chama de Ferro (0)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Preco\", \"Capa\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2025-05-23T18:17:50.523Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "362",
+    "object_repr": "(362) Immanuel Kant ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2025-05-23T18:18:49.633Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "720",
+    "object_repr": "(720) Crítica da Razão Prática (30)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Editora\", \"Autores\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2025-05-23T18:37:45.643Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "68",
+    "object_repr": "dragon-ball-vol.3 - 47c0b424-90d6-4711-a75c-b71dcfbfd246",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2025-05-23T18:37:51.384Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "722",
+    "object_repr": "(722) Dragon Ball Super, Vol. 3: Volume 3 (10000)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2025-05-23T18:39:37.446Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "69",
+    "object_repr": "dragon-ball-vol.4 - 0f29bb36-5571-4aaa-b0ef-a5fbc55e6ee1",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2025-05-23T18:39:43.672Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "723",
+    "object_repr": "(723) Dragon Ball Super, Vol. 4: Volume 4 (1223)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2025-05-23T18:41:41.113Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "70",
+    "object_repr": "dragon-ball-vol.5 - f8a1487b-2575-4ad7-ad94-8351937a08e6",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2025-05-23T18:41:48.895Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "724",
+    "object_repr": "(724) Dragon Ball Super, Vol. 5: Volume 5 (10000)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2025-05-23T18:44:05.091Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "71",
+    "object_repr": "dragon-ball-vol.6 - 7553781c-e0ec-4e81-9ff0-0fe840693d0a",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2025-05-23T18:44:08.166Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "725",
+    "object_repr": "(725) Dragon Ball Super Vol. 6: Volume 6 (10000)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2025-05-23T18:45:55.637Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "72",
+    "object_repr": "dragon-ball-vol.7 - 35fbce3f-5481-491f-bc05-99097eb95cd7",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2025-05-23T18:45:59.626Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "726",
+    "object_repr": "(726) Dragon Ball Super Vol. 7: Volume 7 (1000)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2025-05-23T19:04:28.365Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "73",
+    "object_repr": "dragon-ball-vol.8 - 131c2883-af7f-4012-ad6d-e9dfc184d15c",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2025-05-23T19:04:31.722Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "727",
+    "object_repr": "(727) Dragon Ball Super  Vol.8: Volume 8 (10000)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2025-05-23T19:06:25.360Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "74",
+    "object_repr": "dragon-ball-vol.9 - d3d39a89-c7a1-4722-8c43-28bd864d4737",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2025-05-23T19:06:28.627Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "728",
+    "object_repr": "(728) Dragon Ball Super  Vol.9: Volume 9 (10000)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2025-05-23T19:10:56.821Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "75",
+    "object_repr": "dragon-ball-vol.10 - 2038eec9-834b-4026-a428-47e472ff302a",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2025-05-23T19:10:59.545Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "729",
+    "object_repr": "(729) Dragon Ball Super  Vol.10: Volume 10 (10000)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2025-05-26T18:51:37.945Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "363",
+    "object_repr": "(363) Tomás de Kempis ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2025-05-26T18:54:13.212Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "76",
+    "object_repr": " - b4e5ed76-7fca-4cf0-8d58-7a752786775b",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2025-05-26T18:54:19.663Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "730",
+    "object_repr": "(730) Imitação de Cristo (20)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2025-05-26T18:56:06.323Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "77",
+    "object_repr": " - f94a72c3-29bd-48fe-8446-4608028500fc",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2025-05-26T18:56:59.910Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "731",
+    "object_repr": "(731) O Senhor dos Anéis - A Sociedade do Anel (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2025-05-26T18:57:02.631Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "207",
+    "object_repr": "(207) Boitempo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2025-05-26T18:57:17.353Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "89",
+    "object_repr": "(89) Devocionais",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2025-05-26T18:57:48.179Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "364",
+    "object_repr": "(364) São Luís Maria Grignion de Montfort ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2025-05-26T18:57:56.632Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "78",
+    "object_repr": " - 7ff4691d-75a6-4917-a4f4-16b2509cf4ab",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2025-05-26T18:57:58.220Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "732",
+    "object_repr": "(732) Tratado da verdadeira devoção à Santíssima Virgem (30)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2025-05-26T18:58:06.478Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "365",
+    "object_repr": "(365) Leslie Wolfe ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2025-05-26T18:58:50.222Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "733",
+    "object_repr": "(733) Sobre o suicídio (100)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2025-05-26T19:00:23.453Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "734",
+    "object_repr": "(734) A sagrada família (10)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2025-05-26T19:00:24.008Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "366",
+    "object_repr": "(366) Santo Agostinho ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2025-05-26T19:00:26.962Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "735",
+    "object_repr": "(735) Confissões de Santo Agostinho (30)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2025-05-26T19:01:06.738Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "736",
+    "object_repr": "(736) A Cirurgiã (0)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2025-05-26T19:01:20.114Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "79",
+    "object_repr": "CAPA-DARSKIDE-WARREN-PRETO - 6efe59bb-1e41-4d3d-baeb-44877a23dd40",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2025-05-26T19:01:33.106Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "80",
+    "object_repr": " - c662599c-f070-401f-816c-61afbc2b9ec2",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2025-05-26T19:01:35.957Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "737",
+    "object_repr": "(737) Coraline e o Mundo secreto (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2025-05-26T19:01:38.751Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "367",
+    "object_repr": "(367) Elayne Baeta ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2025-05-26T19:01:43.053Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "738",
+    "object_repr": "(738) O 18 de Brumário de Luiz Bonaparte (100)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2025-05-26T19:01:47.567Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "739",
+    "object_repr": "(739) O Amor Não É Óbvio (0)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2025-05-26T19:01:48.571Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "368",
+    "object_repr": "(368) Santa Teresinha do Menino Jesus ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2025-05-26T19:01:51.387Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "740",
+    "object_repr": "(740) História de uma alma (10)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2025-05-26T19:02:04.757Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "369",
+    "object_repr": "(369) Robert Curran ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2025-05-26T19:02:35.782Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "370",
+    "object_repr": "(370) Janet e Jack Smurl ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2025-05-26T19:03:20.093Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "741",
+    "object_repr": "(741) Ed & Lorraine Warren: Vidas Eternas: 3 (10)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2025-05-26T19:04:27.320Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "371",
+    "object_repr": "(371) Morgan Housel ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2025-05-26T19:04:29.882Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "742",
+    "object_repr": "(742) E eu, não sou intelectual?: Um quase manual de sobrevivência acadêmica (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2025-05-26T19:04:31.839Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "372",
+    "object_repr": "(372) Christie Golden ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2025-05-26T19:04:43.191Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "90",
+    "object_repr": "(90) Fé",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2025-05-26T19:05:06.782Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "373",
+    "object_repr": "(373) São Francisco de Sales ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2025-05-26T19:05:08.593Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "208",
+    "object_repr": "(208) Universo Geek",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2025-05-26T19:05:12.484Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "743",
+    "object_repr": "(743) Luta de classes na Alemanha (10)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2025-05-26T19:05:15.263Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "744",
+    "object_repr": "(744) Filoteia (10)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2025-05-26T19:05:22.464Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "745",
+    "object_repr": "(745) Star Wars: Discípulo sombrio (30)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2025-05-26T19:05:30.543Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "746",
+    "object_repr": "(746) Star Wars: Discípulo sombrio (30)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2025-05-26T19:05:38.269Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "747",
+    "object_repr": "(747) A Psicologia Financeira (10)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2025-05-26T19:06:00.495Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "374",
+    "object_repr": "(374) raiam santos ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2025-05-26T19:06:01.087Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "748",
+    "object_repr": "(748) Coisas Óbvias Sobre O Amor (0)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 113,
+  "fields": {
+    "action_time": "2025-05-26T19:06:32.904Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "749",
+    "object_repr": "(749) Para a crítica da economia política (20)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 114,
+  "fields": {
+    "action_time": "2025-05-26T19:06:49.309Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "750",
+    "object_repr": "(750) Oxe, Baby (0)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 115,
+  "fields": {
+    "action_time": "2025-05-26T19:07:10.573Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "91",
+    "object_repr": "(91) Espiritualidade",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 116,
+  "fields": {
+    "action_time": "2025-05-26T19:07:28.553Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "751",
+    "object_repr": "(751) Chiquititas - Livro Oficial dos Personagens (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 117,
+  "fields": {
+    "action_time": "2025-05-26T19:07:31.341Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "752",
+    "object_repr": "(752) A imitação da bem-aventurada Virgem Maria (15)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 118,
+  "fields": {
+    "action_time": "2025-05-26T19:07:32.769Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "753",
+    "object_repr": "(753) Manuscritos econômico-filosóficos (10)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 119,
+  "fields": {
+    "action_time": "2025-05-26T19:08:00.400Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "754",
+    "object_repr": "(754) Sussurros do Passado (0)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 120,
+  "fields": {
+    "action_time": "2025-05-26T19:08:03.782Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "647",
+    "object_repr": "(647) A Arte da Guerra (200)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"T\\u00edtulo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 121,
+  "fields": {
+    "action_time": "2025-05-26T19:08:27.094Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "755",
+    "object_repr": "(755) A ideologia alemã (10)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 122,
+  "fields": {
+    "action_time": "2025-05-26T19:08:46.500Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "81",
+    "object_repr": " - 2d1ab8da-6f4f-4052-8f8d-b3f94d74ef35",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 123,
+  "fields": {
+    "action_time": "2025-05-26T19:09:03.457Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "92",
+    "object_repr": "(92) Apologética",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 124,
+  "fields": {
+    "action_time": "2025-05-26T19:09:05.670Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "756",
+    "object_repr": "(756) Chiquititas - Livro Oficial dos Personagens (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 125,
+  "fields": {
+    "action_time": "2025-05-26T19:09:26.945Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "757",
+    "object_repr": "(757) O segredo de Maria: Sobre a escravidão da Santa Virgem (10)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 126,
+  "fields": {
+    "action_time": "2025-05-26T19:09:34.963Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "758",
+    "object_repr": "(758) Diferença Entre a Filosofia da Natureza de Demócrito e a de Epicuro (10)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 127,
+  "fields": {
+    "action_time": "2025-05-26T19:10:05.818Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "209",
+    "object_repr": "(209) Kobe",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 128,
+  "fields": {
+    "action_time": "2025-05-26T19:10:14.242Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "759",
+    "object_repr": "(759) Antes de Partir (2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 129,
+  "fields": {
+    "action_time": "2025-05-26T19:10:21.534Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "375",
+    "object_repr": "(375) Thereza Nahas ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 130,
+  "fields": {
+    "action_time": "2025-05-26T19:10:31.171Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "760",
+    "object_repr": "(760) Grundrisse (10)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 131,
+  "fields": {
+    "action_time": "2025-05-26T19:11:06.539Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "376",
+    "object_repr": "(376) Raphael Miziana ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 132,
+  "fields": {
+    "action_time": "2025-05-26T19:11:42.991Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "93",
+    "object_repr": "(93) historia",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 133,
+  "fields": {
+    "action_time": "2025-05-26T19:11:43.865Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "761",
+    "object_repr": "(761) Authenticgames - Vivendo uma vida autêntica 2 (10)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 134,
+  "fields": {
+    "action_time": "2025-05-26T19:11:45.741Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "762",
+    "object_repr": "(762) Crítica do Programa de Gotha (10)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 135,
+  "fields": {
+    "action_time": "2025-05-26T19:11:46.822Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "377",
+    "object_repr": "(377) Leone Pereira ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 136,
+  "fields": {
+    "action_time": "2025-05-26T19:11:57.691Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "763",
+    "object_repr": "(763) Carrossel 2: O sumiço de Maria Joaquina Carrossel 2 -O sumiço de Maria Joaquina (5)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 137,
+  "fields": {
+    "action_time": "2025-05-26T19:12:22.456Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "764",
+    "object_repr": "(764) Olhos Vazios (50)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 138,
+  "fields": {
+    "action_time": "2025-05-26T19:12:29.547Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "378",
+    "object_repr": "(378) Luciano Martinez ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 139,
+  "fields": {
+    "action_time": "2025-05-26T19:12:30.621Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "473",
+    "object_repr": "(473) A Chave do Tamanho (80)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"T\\u00edtulo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 140,
+  "fields": {
+    "action_time": "2025-05-26T19:12:53.365Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "406",
+    "object_repr": "(406) A Carteira (50)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"T\\u00edtulo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 141,
+  "fields": {
+    "action_time": "2025-05-26T19:13:15.159Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "489",
+    "object_repr": "(489) A Árvore Generosa (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"T\\u00edtulo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 142,
+  "fields": {
+    "action_time": "2025-05-26T19:13:19.614Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "765",
+    "object_repr": "(765) NEGRO NA RÚSSIA: Sexo, Racismo e Futebol... No País Mais Odiado Do Mundo (None)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 143,
+  "fields": {
+    "action_time": "2025-05-26T19:13:29.720Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "82",
+    "object_repr": " - f17716e8-5275-465b-a1c3-51bfbc3d14f7",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 144,
+  "fields": {
+    "action_time": "2025-05-26T19:13:32.360Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "766",
+    "object_repr": "(766) Turma da Mônica (3)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 145,
+  "fields": {
+    "action_time": "2025-05-26T19:13:41.045Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "767",
+    "object_repr": "(767) Procure nas Cinzas (16)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 146,
+  "fields": {
+    "action_time": "2025-05-26T19:14:06.590Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "682",
+    "object_repr": "(682) 1981 - O Ano Rubro-Negro (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"T\\u00edtulo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 147,
+  "fields": {
+    "action_time": "2025-05-26T19:14:12.760Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "94",
+    "object_repr": "(94) Direito",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 148,
+  "fields": {
+    "action_time": "2025-05-26T19:15:25.923Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "768",
+    "object_repr": "(768) Não confie em ninguém (13)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 149,
+  "fields": {
+    "action_time": "2025-05-26T19:15:27.583Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "769",
+    "object_repr": "(769) Não confie em ninguém (13)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 150,
+  "fields": {
+    "action_time": "2025-05-26T19:15:38.775Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "83",
+    "object_repr": " - cdfb7846-7e85-436f-a264-6876faca8d36",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 151,
+  "fields": {
+    "action_time": "2025-05-26T19:15:42.036Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "766",
+    "object_repr": "(766) Turma da Mônica (3)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Capa\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 152,
+  "fields": {
+    "action_time": "2025-05-26T19:15:53.984Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "210",
+    "object_repr": "(210) Revista dos Tribunais",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 153,
+  "fields": {
+    "action_time": "2025-05-26T19:15:59.412Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "770",
+    "object_repr": "(770) Leis Trabalhistas Comentadas (0)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 154,
+  "fields": {
+    "action_time": "2025-05-26T19:17:07.520Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "771",
+    "object_repr": "(771) Nunca saia sozinho (0)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 155,
+  "fields": {
+    "action_time": "2025-05-26T19:17:23.823Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "84",
+    "object_repr": " - 0753e7a6-b942-414c-9ba0-2dc10a343a2e",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 156,
+  "fields": {
+    "action_time": "2025-05-26T19:18:03.364Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "772",
+    "object_repr": "(772) Deixada para trás (0)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 157,
+  "fields": {
+    "action_time": "2025-05-26T19:18:05.737Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "773",
+    "object_repr": "(773) Deixada para trás (0)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 158,
+  "fields": {
+    "action_time": "2025-05-26T19:19:36.361Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "85",
+    "object_repr": " - c586d6fe-9cad-490e-b6b3-4046c67bbc1b",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 159,
+  "fields": {
+    "action_time": "2025-05-26T19:19:39.441Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "211",
+    "object_repr": "(211) Alt",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 160,
+  "fields": {
+    "action_time": "2025-05-26T19:19:41.404Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "774",
+    "object_repr": "(774) Minecraft - Em busca da Maçã dourada (3)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 161,
+  "fields": {
+    "action_time": "2025-05-26T19:20:13.082Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "379",
+    "object_repr": "(379) Kelly Quindlen ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 162,
+  "fields": {
+    "action_time": "2025-05-26T19:20:20.466Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "775",
+    "object_repr": "(775) A Jogada Do Amor (0)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 163,
+  "fields": {
+    "action_time": "2025-05-26T19:21:07.799Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "776",
+    "object_repr": "(776) Those empty eyes (0)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 164,
+  "fields": {
+    "action_time": "2025-05-26T19:21:10.497Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "86",
+    "object_repr": " - 5e74d95d-9ea0-413b-894a-e83b9e90bad0",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 165,
+  "fields": {
+    "action_time": "2025-05-26T19:21:12.405Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "777",
+    "object_repr": "(777) Eu e meu pai (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 166,
+  "fields": {
+    "action_time": "2025-05-26T19:22:28.700Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "778",
+    "object_repr": "(778) Twenty years later (0)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 167,
+  "fields": {
+    "action_time": "2025-05-26T19:23:26.443Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "87",
+    "object_repr": " - 51041e1a-80b6-4f9d-a084-ff24b43dad93",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 168,
+  "fields": {
+    "action_time": "2025-05-26T19:23:34.746Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "779",
+    "object_repr": "(779) Perigoso! (3)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 169,
+  "fields": {
+    "action_time": "2025-05-26T19:23:55.284Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "768",
+    "object_repr": "(768) Não confie em ninguém (13)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 170,
+  "fields": {
+    "action_time": "2025-05-26T19:24:03.139Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "380",
+    "object_repr": "(380) Jeff Benedict ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 171,
+  "fields": {
+    "action_time": "2025-05-26T19:24:11.147Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "772",
+    "object_repr": "(772) Deixada para trás (0)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 172,
+  "fields": {
+    "action_time": "2025-05-26T19:24:18.552Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "780",
+    "object_repr": "(780) LeBron (40)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 173,
+  "fields": {
+    "action_time": "2025-05-26T19:24:36.857Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "86",
+    "object_repr": " - 5e74d95d-9ea0-413b-894a-e83b9e90bad0",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 174,
+  "fields": {
+    "action_time": "2025-05-26T19:26:14.394Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "212",
+    "object_repr": "(212) Realejo",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 175,
+  "fields": {
+    "action_time": "2025-05-26T19:28:00.132Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "381",
+    "object_repr": "(381) Zlatan Ibrahimovic ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 176,
+  "fields": {
+    "action_time": "2025-05-26T19:28:15.657Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "781",
+    "object_repr": "(781) Eu Sou Zlatan (0)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 177,
+  "fields": {
+    "action_time": "2025-05-26T19:30:36.884Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "647",
+    "object_repr": "(647) A Arte da Guerra (200)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 178,
+  "fields": {
+    "action_time": "2025-05-26T19:31:45.729Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "382",
+    "object_repr": "(382) Vários autores ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 179,
+  "fields": {
+    "action_time": "2025-05-26T19:31:49.918Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "647",
+    "object_repr": "(647) A Arte da Guerra (200)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 180,
+  "fields": {
+    "action_time": "2025-05-26T19:32:58.007Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "95",
+    "object_repr": "(95) Album de figurinhas",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 181,
+  "fields": {
+    "action_time": "2025-05-26T19:33:09.790Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "782",
+    "object_repr": "(782) Album Capa Dura da Copa 2018 (0)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 182,
+  "fields": {
+    "action_time": "2025-05-26T19:33:16.341Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "783",
+    "object_repr": "(783) Album Capa Dura da Copa 2018 (0)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 183,
+  "fields": {
+    "action_time": "2025-05-26T19:33:47.264Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "385",
+    "object_repr": "(385) Album da Copa 2022 (0)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Categoria\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 184,
+  "fields": {
+    "action_time": "2025-05-26T19:36:25.363Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "782",
+    "object_repr": "(782) Album Capa Dura da Copa 2018 (0)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 185,
+  "fields": {
+    "action_time": "2025-05-26T19:36:52.825Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "681",
+    "object_repr": "(681) A Megera Domada (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"T\\u00edtulo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 186,
+  "fields": {
+    "action_time": "2025-05-26T19:37:05.571Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "383",
+    "object_repr": "(383) gabriel marques ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 187,
+  "fields": {
+    "action_time": "2025-05-26T19:38:13.529Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "566",
+    "object_repr": "(566) Critérios e Itinerários para a Instituição do Ministério de Catequista (300)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"T\\u00edtulo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 188,
+  "fields": {
+    "action_time": "2025-05-26T19:42:00.583Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "137",
+    "object_repr": "(137) Os Sertões (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"T\\u00edtulo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 189,
+  "fields": {
+    "action_time": "2025-05-26T19:42:23.688Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "711",
+    "object_repr": "(711) Peanuts Completo: 1957 a 1958 - Vol. 4 Brochura (9)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"T\\u00edtulo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 190,
+  "fields": {
+    "action_time": "2025-05-26T19:42:55.279Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "708",
+    "object_repr": "(708) Snoopy 1 – E Sua Turma (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"T\\u00edtulo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 191,
+  "fields": {
+    "action_time": "2025-05-26T19:43:16.522Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "709",
+    "object_repr": "(709) Snoopy 8 – no Mundo da Lua! (Volume 8) (6)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"T\\u00edtulo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 192,
+  "fields": {
+    "action_time": "2025-05-26T19:43:27.948Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "733",
+    "object_repr": "(733) Sobre o Suicídio (100)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"T\\u00edtulo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 193,
+  "fields": {
+    "action_time": "2025-05-26T19:43:51.145Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "333",
+    "object_repr": "(333) The Drowned World (999)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"T\\u00edtulo\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 194,
+  "fields": {
+    "action_time": "2025-05-27T11:26:36.814Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "88",
+    "object_repr": "Superman - e916b0f0-40b6-4ee9-af19-88dfd2608118",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 195,
+  "fields": {
+    "action_time": "2025-05-27T11:26:47.770Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "a@a.com",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Foto\"]}}]"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add document",
+    "content_type": 6,
+    "codename": "add_document"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change document",
+    "content_type": 6,
+    "codename": "change_document"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete document",
+    "content_type": 6,
+    "codename": "delete_document"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view document",
+    "content_type": 6,
+    "codename": "view_document"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add image",
+    "content_type": 7,
+    "codename": "add_image"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change image",
+    "content_type": 7,
+    "codename": "change_image"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete image",
+    "content_type": 7,
+    "codename": "delete_image"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view image",
+    "content_type": 7,
+    "codename": "view_image"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add Usuário",
+    "content_type": 8,
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change Usuário",
+    "content_type": 8,
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete Usuário",
+    "content_type": 8,
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view Usuário",
+    "content_type": 8,
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add categoria",
+    "content_type": 9,
+    "codename": "add_categoria"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change categoria",
+    "content_type": 9,
+    "codename": "change_categoria"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete categoria",
+    "content_type": 9,
+    "codename": "delete_categoria"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view categoria",
+    "content_type": 9,
+    "codename": "view_categoria"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add editora",
+    "content_type": 10,
+    "codename": "add_editora"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change editora",
+    "content_type": 10,
+    "codename": "change_editora"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete editora",
+    "content_type": 10,
+    "codename": "delete_editora"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view editora",
+    "content_type": 10,
+    "codename": "view_editora"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can add Autor",
+    "content_type": 11,
+    "codename": "add_autor"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can change Autor",
+    "content_type": 11,
+    "codename": "change_autor"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can delete Autor",
+    "content_type": 11,
+    "codename": "delete_autor"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can view Autor",
+    "content_type": 11,
+    "codename": "view_autor"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can add livro",
+    "content_type": 12,
+    "codename": "add_livro"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can change livro",
+    "content_type": 12,
+    "codename": "change_livro"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can delete livro",
+    "content_type": 12,
+    "codename": "delete_livro"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can view livro",
+    "content_type": 12,
+    "codename": "view_livro"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can add compra",
+    "content_type": 13,
+    "codename": "add_compra"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can change compra",
+    "content_type": 13,
+    "codename": "change_compra"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can delete compra",
+    "content_type": 13,
+    "codename": "delete_compra"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can view compra",
+    "content_type": 13,
+    "codename": "view_compra"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can add itens compra",
+    "content_type": 14,
+    "codename": "add_itenscompra"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 54,
+  "fields": {
+    "name": "Can change itens compra",
+    "content_type": 14,
+    "codename": "change_itenscompra"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 55,
+  "fields": {
+    "name": "Can delete itens compra",
+    "content_type": 14,
+    "codename": "delete_itenscompra"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 56,
+  "fields": {
+    "name": "Can view itens compra",
+    "content_type": 14,
+    "codename": "view_itenscompra"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 57,
+  "fields": {
+    "name": "Can add favorito",
+    "content_type": 15,
+    "codename": "add_favorito"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 58,
+  "fields": {
+    "name": "Can change favorito",
+    "content_type": 15,
+    "codename": "change_favorito"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 59,
+  "fields": {
+    "name": "Can delete favorito",
+    "content_type": 15,
+    "codename": "delete_favorito"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 60,
+  "fields": {
+    "name": "Can view favorito",
+    "content_type": 15,
+    "codename": "view_favorito"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "uploader",
+    "model": "document"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "uploader",
+    "model": "image"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "core",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "core",
+    "model": "categoria"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "core",
+    "model": "editora"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "core",
+    "model": "autor"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "core",
+    "model": "livro"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "core",
+    "model": "compra"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 14,
+  "fields": {
+    "app_label": "core",
+    "model": "itenscompra"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 15,
+  "fields": {
+    "app_label": "core",
+    "model": "favorito"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "0xpn8k7kpmelu8vkavo6pylxj4pjzyg5",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uIWEb:jPJt-sZT93Y0wPjD7TClUxoy1V1SwF3BeC0bl2dS8dM",
+    "expire_date": "2025-06-06T17:31:05.042Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "2dgtvmt4jm44br3lq06nlkkflw131f3o",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uJcwk:udRSr-0nNbosPbCxVMIbY1SUNdEfRCs_SltQX1dZGeM",
+    "expire_date": "2025-06-09T18:53:14.809Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "2gvxw0wd5r68j56emc7sbiq8uir4d9mv",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSFlgDK4dO83kIGZStXQpI-V8d-1SRe6veec-1KJtrWmbZE5jazOyqjT75apPKTtgO_UbpMuU1vnMetd0Qdd9HVieV4O9--g0lK_NXY8mGL7jGxYwHkCtBKF8uAjkoQwRM4OOILrEYPrrHQByVgAVzyp9wfviDev:1uEqwa:xfvsW_2aEMDTTz9FPTxYdTOuu9DFkBD8uUL51rcKRf0",
+    "expire_date": "2025-05-27T14:49:20.127Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "3ab663l4x8jaytwilsh2z6vqkfz1ru8e",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uJd1K:V3m_jdNETnQGAhpsJkaMcP7OKMwGfdrXl48bmvKwE6Q",
+    "expire_date": "2025-06-09T18:57:58.683Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "3rcvgtihj43sjwj8g0bhyl8uxxcjzu1d",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uJd1t:Pu80eZPQF6ohdEy694_9eWrUG0FETxPQxTLelthpo2A",
+    "expire_date": "2025-06-09T18:58:33.880Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "6nvf9wf96mf2m4i00vnb4g3p6kmt2a40",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uIWAo:a5FyRZbYyciReYcvwD608VRXagiwbfUVmIZEGR8YBR0",
+    "expire_date": "2025-06-06T17:27:10.370Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "9s8ededolx2r60g8ueiax7qm6rxyifjy",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uJd0O:IQBbEmXN7YAXxR_CSQlxl6qrOTmrrNNjjx-7a59AMns",
+    "expire_date": "2025-06-09T18:57:00.992Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ahbvavzrnth8wo8ntlhg09iwnn4ccttb",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uJcyU:FHyBgW6xwWWDp7w6i1bH1gIWFLb38JBdccHE4M84uRI",
+    "expire_date": "2025-06-09T18:55:02.321Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "aonlsv9x1a5zlt5zf2a59xdwkcx521d2",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uJcxn:LT3vHbD1ak0aIYY_h2V5ljyrZtXDYVWgtMgRiaNVGgs",
+    "expire_date": "2025-06-09T18:54:19.715Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "bohlgbyf771n7zouu0cbt7j1evyert8t",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uIWIj:xQwOTxlQj6ML5ByfP2xc-1QK8uxEgp5Pc1Wlu2uR9h4",
+    "expire_date": "2025-06-06T17:35:21.149Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "gmjyrqjgommkvkfb19z8efhxpqqg7cqs",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uIW9C:R-0tDR4OCJnv3u01i03nyeEpKfH-V3J2V47RbadZhQ0",
+    "expire_date": "2025-06-06T17:25:30.629Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "he6mjlanj07q3tshgb83canhxg6yzw9e",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uJd36:9P8RGA91U3anheaSkbpNTxQGR2XvthdjSb50SoJhF8Y",
+    "expire_date": "2025-06-09T18:59:48.007Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "i31zpiwqtyle6ee5306hzpwjo1uolexb",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uJcuC:Qy4xDOsyOKlQttc0mhQKjPz8knc4vv86A-VEjYgrvCs",
+    "expire_date": "2025-06-09T18:50:36.969Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "iwf3ci75l7irfs4693jxnuw9jge072x1",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uIW8w:jRD63pHMY37tdOFXMX-xIEP0DQDZBJ3rJbr3ZfEWl1U",
+    "expire_date": "2025-06-06T17:25:14.078Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "j6pjvk53s3nv4uilju2h9s40pxnvpcge",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uIW93:oJkdyWhGflTZ2Ze_wWtfpM7YxR4ATw7Xk1dHcKt7o7Q",
+    "expire_date": "2025-06-06T17:25:21.833Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "k2urlr76p8uudlcgaj8gkreugyb4zcee",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uIW95:EV902JqKqwp8FESRlXatPJMlp6XaBt9c2NwnC_QPd4I",
+    "expire_date": "2025-06-06T17:25:23.569Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "k2ylmlfh031ks0y9jfxujtjo4wq1byu8",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uIWjw:SUvpnnoLguA5JWR6xIzP1bmQRHf0Q3YaTDAHTKI2ZpU",
+    "expire_date": "2025-06-06T18:03:28.521Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "n3kbv34das16iqco08f5c97pcgnwg58y",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uIW92:XI3FQKtFLhLNu3jbg182-2s2zOmjTljNzmaLLMbBPM0",
+    "expire_date": "2025-06-06T17:25:20.764Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "n7r023ka9nu0emf1aajwfx2azzv24t91",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uIWnC:a_ZhR9qLinoJWwIVEbhz1_Afamqb4Xeq1tUYT83PCuo",
+    "expire_date": "2025-06-06T18:06:50.671Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "pm68b30g5hrhks10eslc095q9sxqaj5g",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uIWil:efij2UtrHAy4db8sj7-imUAdVBhW03zMqyKWi98Mp2E",
+    "expire_date": "2025-06-06T18:02:15.302Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ps1v67l1qji85x1sjqzugvdaz0d7extl",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uJcqp:5yuGBeuFA7_uO1HG0K7FcWWlugt6NWT6rGG7aTT_o2M",
+    "expire_date": "2025-06-09T18:47:07.085Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qyeb2m2c5w9pojg7jjis1hxkelts7asu",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uIWAS:vDsb9m449Nnboa0IxVAxusAMZRddT7hvBWor-i_2ZKU",
+    "expire_date": "2025-06-06T17:26:48.019Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ri52cbsx2zww7cm3kxuvevr0rzwdsq0z",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uIYFF:L8Tu8FqXWl5LAqMY3Zryzup5kkIc-CL2c03oX27E91g",
+    "expire_date": "2025-06-06T19:39:53.358Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "uchsy0sy78kxfajbb1yg6ba8f92qt68l",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uJcwk:udRSr-0nNbosPbCxVMIbY1SUNdEfRCs_SltQX1dZGeM",
+    "expire_date": "2025-06-09T18:53:14.080Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "uj56tpyfu7wp677v2l49se2edma9flsi",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uIW9a:ZbpQgxLPC56RYCqYZVzGPwPzRRsBhH6t_pBUeJ8hf3w",
+    "expire_date": "2025-06-06T17:25:54.282Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "vjttmipjxauk9zh5ahtbemwlmgqxtmqg",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uJcsR:DE4bzOKl86ONTr-Y0RWVe7FYi_w8kcwcwZhOmJLEOoo",
+    "expire_date": "2025-06-09T18:48:47.012Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "w3itxggtcev3wo2nxi04bpwteryywiq4",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uH4FZ:jDglPs-aivXaHI1KV49u9xRKBJscCRr5-4PA_k8kNqA",
+    "expire_date": "2025-06-02T17:26:05.521Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wpx6dae0opyprcg13qauz2zj84dc4vbx",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uJdWK:h2GOvygb-_hPxZKnuU7p7CbbX7a7nB-saH0JmFfM3jk",
+    "expire_date": "2025-06-09T19:30:00.948Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ywgjtarruhaxmr164an6192beievd0co",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSE8OgIu3fcbyDBMpWogKe3K-O_apAvd3nPOfYmI21ri1nmJcxYXocXpd0tID647yHestyap1XWZk9wVedAux5b5eT3cv4OCvXxrD1pbrcgYn83ZkbeDHRIjmwmBkncqADMNAVUOzmSXAmvHYAHA-SmJ9wfHjTd_:1uIWix:bxQftDD1CZfbfrGDQEV87_wiR3Fn73UPf_lvgQR0JjQ",
+    "expire_date": "2025-06-06T18:02:27.942Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 51,
+  "fields": {
+    "attachment_key": "b2379278-cd9d-47ff-99c9-b9685b89dcd4",
+    "public_id": "ba4460e3-be67-4685-901c-a4ad4037a409",
+    "file": "images/ba4460e3-be67-4685-901c-a4ad4037a409.jpg",
+    "description": "Marco André 2024",
+    "uploaded_on": "2024-10-11T14:02:08.076Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 52,
+  "fields": {
+    "attachment_key": "a424a6d0-7263-4c56-b498-ae322f7ef762",
+    "public_id": "0dfc7989-4b65-4bdd-a93c-61d185a4b5ef",
+    "file": "images/0dfc7989-4b65-4bdd-a93c-61d185a4b5ef.jpg",
+    "description": "1984",
+    "uploaded_on": "2024-11-19T18:29:20.701Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 53,
+  "fields": {
+    "attachment_key": "4a1de899-9f0f-470e-b245-d81ab01af35a",
+    "public_id": "5d12abf3-0593-457c-ace4-1eaf622d69d0",
+    "file": "images/5d12abf3-0593-457c-ace4-1eaf622d69d0.jpg",
+    "description": "",
+    "uploaded_on": "2025-05-23T17:33:33.219Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 54,
+  "fields": {
+    "attachment_key": "e131fb8d-be51-494c-bc4a-a239a457eb94",
+    "public_id": "48d4d651-a7ac-4c2f-a1d4-3e4cb7f79875",
+    "file": "images/48d4d651-a7ac-4c2f-a1d4-3e4cb7f79875.jpg",
+    "description": "",
+    "uploaded_on": "2025-05-23T17:35:09.806Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 55,
+  "fields": {
+    "attachment_key": "fb2ca996-4169-40b6-831a-f871ceed8caf",
+    "public_id": "6e156cb5-e666-4a29-bb26-d7305925a8b7",
+    "file": "images/6e156cb5-e666-4a29-bb26-d7305925a8b7.jpg",
+    "description": "",
+    "uploaded_on": "2025-05-23T17:37:18.999Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 56,
+  "fields": {
+    "attachment_key": "7bed1754-cbd2-4daf-9dde-5a27f8ca706d",
+    "public_id": "801613cf-2f87-43db-91b3-75f9e4927d72",
+    "file": "images/801613cf-2f87-43db-91b3-75f9e4927d72.jpg",
+    "description": "",
+    "uploaded_on": "2025-05-23T17:39:06.329Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 57,
+  "fields": {
+    "attachment_key": "366a899b-acf8-4da8-b506-d3ee31c26e51",
+    "public_id": "ff8dba50-6f56-48f6-bf01-a4ac03ad324f",
+    "file": "images/ff8dba50-6f56-48f6-bf01-a4ac03ad324f.jpg",
+    "description": "",
+    "uploaded_on": "2025-05-23T17:40:13.360Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 58,
+  "fields": {
+    "attachment_key": "41e5904d-4790-427a-9f59-3d70b363f557",
+    "public_id": "8fb05be9-a143-4559-8a35-33f79a24796e",
+    "file": "images/8fb05be9-a143-4559-8a35-33f79a24796e.jpg",
+    "description": "",
+    "uploaded_on": "2025-05-23T17:41:05.958Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 59,
+  "fields": {
+    "attachment_key": "be93f47b-793d-4e0b-8225-1e083485b852",
+    "public_id": "91c0432e-9325-451e-9f0f-3157a9408b02",
+    "file": "images/91c0432e-9325-451e-9f0f-3157a9408b02.jpg",
+    "description": "",
+    "uploaded_on": "2025-05-23T17:43:15.533Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 60,
+  "fields": {
+    "attachment_key": "aa9beb71-7fc7-4f66-911d-7ec49090f160",
+    "public_id": "5ac87de8-8581-45f6-b3ef-f8026e7f9f45",
+    "file": "images/5ac87de8-8581-45f6-b3ef-f8026e7f9f45.jpg",
+    "description": "",
+    "uploaded_on": "2025-05-23T17:44:54.861Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 61,
+  "fields": {
+    "attachment_key": "3b801100-c6fe-42de-a9e7-0812ed9d5b0d",
+    "public_id": "9380a1fd-325d-469e-967a-9f2c4e2c194e",
+    "file": "images/9380a1fd-325d-469e-967a-9f2c4e2c194e.jpg",
+    "description": "",
+    "uploaded_on": "2025-05-23T17:46:02.403Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 62,
+  "fields": {
+    "attachment_key": "c3d3e605-d04b-4dbe-9dda-0c4ec5343a01",
+    "public_id": "8b0c79da-60fc-4d0d-af62-9d0ec8c2e018",
+    "file": "images/8b0c79da-60fc-4d0d-af62-9d0ec8c2e018.jpg",
+    "description": "",
+    "uploaded_on": "2025-05-23T17:47:40.098Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 63,
+  "fields": {
+    "attachment_key": "1520a53a-a72b-44cb-a8a3-9da94247dfe2",
+    "public_id": "1bb2fe7a-a0a6-467c-8dfa-4c239b005d54",
+    "file": "images/1bb2fe7a-a0a6-467c-8dfa-4c239b005d54.jpg",
+    "description": "dragon-ball-vol.1",
+    "uploaded_on": "2025-05-23T17:48:04.032Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 64,
+  "fields": {
+    "attachment_key": "848b510c-05a4-4cd8-a44e-31eb06ec07c9",
+    "public_id": "44a82144-a3a5-401f-aace-fe3abccb7e6f",
+    "file": "images/44a82144-a3a5-401f-aace-fe3abccb7e6f.jpg",
+    "description": "",
+    "uploaded_on": "2025-05-23T17:49:16.927Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 65,
+  "fields": {
+    "attachment_key": "ef3a94b4-573f-4745-8d0a-6d51864ab833",
+    "public_id": "a3621900-a8f8-44ef-b9b5-f41bf2bf22c8",
+    "file": "images/a3621900-a8f8-44ef-b9b5-f41bf2bf22c8.jpg",
+    "description": "dragon-ball-vol.2",
+    "uploaded_on": "2025-05-23T17:54:39.281Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 66,
+  "fields": {
+    "attachment_key": "353690b8-1ae2-43e2-80a3-a300d6afc3a4",
+    "public_id": "8916953e-04b1-4a48-88aa-36e96421ad31",
+    "file": "images/8916953e-04b1-4a48-88aa-36e96421ad31.jpg",
+    "description": "tempestade onix",
+    "uploaded_on": "2025-05-23T18:09:36.214Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 67,
+  "fields": {
+    "attachment_key": "85fab27e-10b6-40d5-b086-2869dff22f3b",
+    "public_id": "2c2aeae6-5999-4b76-8bbc-d571941e7f08",
+    "file": "images/2c2aeae6-5999-4b76-8bbc-d571941e7f08.jpg",
+    "description": "tempestade onix",
+    "uploaded_on": "2025-05-23T18:16:28.912Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 68,
+  "fields": {
+    "attachment_key": "47c0b424-90d6-4711-a75c-b71dcfbfd246",
+    "public_id": "df5e7ab4-a580-4a12-aedd-d0604f067550",
+    "file": "images/df5e7ab4-a580-4a12-aedd-d0604f067550.jpg",
+    "description": "dragon-ball-vol.3",
+    "uploaded_on": "2025-05-23T18:37:45.614Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 69,
+  "fields": {
+    "attachment_key": "0f29bb36-5571-4aaa-b0ef-a5fbc55e6ee1",
+    "public_id": "4bd310eb-d029-43d2-8eb1-730e0ff72031",
+    "file": "images/4bd310eb-d029-43d2-8eb1-730e0ff72031.jpg",
+    "description": "dragon-ball-vol.4",
+    "uploaded_on": "2025-05-23T18:39:37.424Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 70,
+  "fields": {
+    "attachment_key": "f8a1487b-2575-4ad7-ad94-8351937a08e6",
+    "public_id": "61dbe78a-1bb8-40db-850d-8a9a09eb4497",
+    "file": "images/61dbe78a-1bb8-40db-850d-8a9a09eb4497.jpg",
+    "description": "dragon-ball-vol.5",
+    "uploaded_on": "2025-05-23T18:41:41.090Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 71,
+  "fields": {
+    "attachment_key": "7553781c-e0ec-4e81-9ff0-0fe840693d0a",
+    "public_id": "dc486eee-4195-42d1-a692-98206719475c",
+    "file": "images/dc486eee-4195-42d1-a692-98206719475c.jpg",
+    "description": "dragon-ball-vol.6",
+    "uploaded_on": "2025-05-23T18:44:05.063Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 72,
+  "fields": {
+    "attachment_key": "35fbce3f-5481-491f-bc05-99097eb95cd7",
+    "public_id": "c74a2ea5-40dd-401b-944a-56ec98e9852f",
+    "file": "images/c74a2ea5-40dd-401b-944a-56ec98e9852f.jpg",
+    "description": "dragon-ball-vol.7",
+    "uploaded_on": "2025-05-23T18:45:55.610Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 73,
+  "fields": {
+    "attachment_key": "131c2883-af7f-4012-ad6d-e9dfc184d15c",
+    "public_id": "9db948fa-afe7-4cae-a578-76ba41fadd59",
+    "file": "images/9db948fa-afe7-4cae-a578-76ba41fadd59.jpg",
+    "description": "dragon-ball-vol.8",
+    "uploaded_on": "2025-05-23T19:04:28.344Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 74,
+  "fields": {
+    "attachment_key": "d3d39a89-c7a1-4722-8c43-28bd864d4737",
+    "public_id": "666a3c40-0ead-44f1-a46e-6eff8dded564",
+    "file": "images/666a3c40-0ead-44f1-a46e-6eff8dded564.jpg",
+    "description": "dragon-ball-vol.9",
+    "uploaded_on": "2025-05-23T19:06:25.341Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 75,
+  "fields": {
+    "attachment_key": "2038eec9-834b-4026-a428-47e472ff302a",
+    "public_id": "0e72a72b-7174-4676-86a9-4b48375a95e4",
+    "file": "images/0e72a72b-7174-4676-86a9-4b48375a95e4.jpg",
+    "description": "dragon-ball-vol.10",
+    "uploaded_on": "2025-05-23T19:10:56.798Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 76,
+  "fields": {
+    "attachment_key": "b4e5ed76-7fca-4cf0-8d58-7a752786775b",
+    "public_id": "602ff8ce-7cc8-4d08-8d8c-f25d90931b04",
+    "file": "images/602ff8ce-7cc8-4d08-8d8c-f25d90931b04.jpg",
+    "description": "",
+    "uploaded_on": "2025-05-26T18:54:13.171Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 77,
+  "fields": {
+    "attachment_key": "f94a72c3-29bd-48fe-8446-4608028500fc",
+    "public_id": "efc0a3c4-09f9-4a02-baae-f97ccd7db454",
+    "file": "images/efc0a3c4-09f9-4a02-baae-f97ccd7db454.jpg",
+    "description": "",
+    "uploaded_on": "2025-05-26T18:56:06.293Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 78,
+  "fields": {
+    "attachment_key": "7ff4691d-75a6-4917-a4f4-16b2509cf4ab",
+    "public_id": "d81c4abe-5b47-4fa5-a9ea-3d6e19e16d9b",
+    "file": "images/d81c4abe-5b47-4fa5-a9ea-3d6e19e16d9b.jpg",
+    "description": "",
+    "uploaded_on": "2025-05-26T18:57:56.601Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 79,
+  "fields": {
+    "attachment_key": "6efe59bb-1e41-4d3d-baeb-44877a23dd40",
+    "public_id": "273d861d-5ee1-4eec-a7ad-7223eaf68bc9",
+    "file": "images/273d861d-5ee1-4eec-a7ad-7223eaf68bc9.jpg",
+    "description": "CAPA-DARSKIDE-WARREN-PRETO",
+    "uploaded_on": "2025-05-26T19:01:20.092Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 80,
+  "fields": {
+    "attachment_key": "c662599c-f070-401f-816c-61afbc2b9ec2",
+    "public_id": "2e993f29-9e47-4139-87f2-76ec1e8a0923",
+    "file": "images/2e993f29-9e47-4139-87f2-76ec1e8a0923.jpg",
+    "description": "",
+    "uploaded_on": "2025-05-26T19:01:33.083Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 81,
+  "fields": {
+    "attachment_key": "2d1ab8da-6f4f-4052-8f8d-b3f94d74ef35",
+    "public_id": "4800b288-6fac-4daf-ac5b-b8e77f1add3d",
+    "file": "images/4800b288-6fac-4daf-ac5b-b8e77f1add3d.jpg",
+    "description": "",
+    "uploaded_on": "2025-05-26T19:08:46.474Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 82,
+  "fields": {
+    "attachment_key": "f17716e8-5275-465b-a1c3-51bfbc3d14f7",
+    "public_id": "bba1310e-f45d-4260-8c24-499c5118b431",
+    "file": "images/bba1310e-f45d-4260-8c24-499c5118b431.jpg",
+    "description": "",
+    "uploaded_on": "2025-05-26T19:13:29.698Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 83,
+  "fields": {
+    "attachment_key": "cdfb7846-7e85-436f-a264-6876faca8d36",
+    "public_id": "afe2873d-9e95-475b-8e55-0b054d8efa78",
+    "file": "images/afe2873d-9e95-475b-8e55-0b054d8efa78.jpg",
+    "description": "",
+    "uploaded_on": "2025-05-26T19:15:38.753Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 84,
+  "fields": {
+    "attachment_key": "0753e7a6-b942-414c-9ba0-2dc10a343a2e",
+    "public_id": "a73ed0fb-eb36-4716-8b22-81a8e333b2db",
+    "file": "images/a73ed0fb-eb36-4716-8b22-81a8e333b2db.jpg",
+    "description": "",
+    "uploaded_on": "2025-05-26T19:17:23.801Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 85,
+  "fields": {
+    "attachment_key": "c586d6fe-9cad-490e-b6b3-4046c67bbc1b",
+    "public_id": "9300a6cb-9091-4533-9fe6-f82bed042e77",
+    "file": "images/9300a6cb-9091-4533-9fe6-f82bed042e77.jpg",
+    "description": "",
+    "uploaded_on": "2025-05-26T19:19:36.336Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 87,
+  "fields": {
+    "attachment_key": "51041e1a-80b6-4f9d-a084-ff24b43dad93",
+    "public_id": "94f3a1ff-130a-4ca4-b3c7-d10e7e6d1591",
+    "file": "images/94f3a1ff-130a-4ca4-b3c7-d10e7e6d1591.jpg",
+    "description": "",
+    "uploaded_on": "2025-05-26T19:23:26.420Z"
+  }
+},
+{
+  "model": "uploader.image",
+  "pk": 88,
+  "fields": {
+    "attachment_key": "e916b0f0-40b6-4ee9-af19-88dfd2608118",
+    "public_id": "d264554e-4dde-41e6-9686-f10704ee12b7",
+    "file": "media/images/d264554e-4dde-41e6-9686-f10704ee12b7_viqhnr",
+    "description": "Superman",
+    "uploaded_on": "2025-05-27T11:26:36.681Z"
+  }
+},
 {
   "model": "core.autor",
   "pk": 1,
@@ -5781,7 +9618,7 @@
     "preco": "180.00",
     "categoria": 19,
     "editora": 7,
-    "capa": null,
+    "capa": 52,
     "autores": [
       37
     ]
@@ -15147,7 +18984,7 @@
     "preco": "39.44",
     "categoria": 2,
     "editora": 99,
-    "capa": null,
+    "capa": 66,
     "autores": [
       174
     ]
@@ -15737,7 +19574,7 @@
     "preco": "49.00",
     "categoria": 13,
     "editora": 125,
-    "capa": null,
+    "capa": 54,
     "autores": []
   }
 },
@@ -15751,7 +19588,7 @@
     "preco": "51.00",
     "categoria": 32,
     "editora": 188,
-    "capa": null,
+    "capa": 55,
     "autores": []
   }
 },
@@ -15765,7 +19602,7 @@
     "preco": "51.00",
     "categoria": 2,
     "editora": 188,
-    "capa": null,
+    "capa": 56,
     "autores": []
   }
 },
@@ -15779,7 +19616,7 @@
     "preco": "51.00",
     "categoria": 2,
     "editora": 188,
-    "capa": null,
+    "capa": 57,
     "autores": []
   }
 },
@@ -15809,7 +19646,7 @@
     "preco": "51.00",
     "categoria": 2,
     "editora": 188,
-    "capa": null,
+    "capa": 58,
     "autores": []
   }
 },
@@ -15839,7 +19676,7 @@
     "preco": "51.00",
     "categoria": 17,
     "editora": 46,
-    "capa": null,
+    "capa": 59,
     "autores": []
   }
 },
@@ -15853,7 +19690,7 @@
     "preco": "51.00",
     "categoria": 17,
     "editora": 46,
-    "capa": null,
+    "capa": 60,
     "autores": []
   }
 },
@@ -15883,7 +19720,7 @@
     "preco": "51.00",
     "categoria": 17,
     "editora": 46,
-    "capa": null,
+    "capa": 61,
     "autores": []
   }
 },
@@ -15897,7 +19734,7 @@
     "preco": "51.00",
     "categoria": 13,
     "editora": 125,
-    "capa": null,
+    "capa": 62,
     "autores": []
   }
 },
@@ -15927,7 +19764,7 @@
     "preco": null,
     "categoria": 6,
     "editora": 104,
-    "capa": null,
+    "capa": 63,
     "autores": [
       358
     ]
@@ -15943,7 +19780,7 @@
     "preco": "51.00",
     "categoria": 34,
     "editora": 203,
-    "capa": null,
+    "capa": 64,
     "autores": []
   }
 },
@@ -15957,7 +19794,7 @@
     "preco": "83.46",
     "categoria": 6,
     "editora": 104,
-    "capa": null,
+    "capa": 65,
     "autores": [
       358
     ]
@@ -16005,7 +19842,7 @@
     "preco": "78.38",
     "categoria": 88,
     "editora": 25,
-    "capa": null,
+    "capa": 67,
     "autores": [
       350
     ]
@@ -16053,7 +19890,7 @@
     "preco": "78.12",
     "categoria": 6,
     "editora": 104,
-    "capa": null,
+    "capa": 68,
     "autores": [
       358
     ]
@@ -16069,7 +19906,7 @@
     "preco": "92.96",
     "categoria": 6,
     "editora": 104,
-    "capa": null,
+    "capa": 69,
     "autores": [
       358
     ]
@@ -16085,7 +19922,7 @@
     "preco": "91.33",
     "categoria": 6,
     "editora": 104,
-    "capa": null,
+    "capa": 70,
     "autores": [
       358
     ]
@@ -16101,7 +19938,7 @@
     "preco": "28.27",
     "categoria": 6,
     "editora": 104,
-    "capa": null,
+    "capa": 71,
     "autores": [
       358
     ]
@@ -16117,7 +19954,7 @@
     "preco": "31.06",
     "categoria": 6,
     "editora": 104,
-    "capa": null,
+    "capa": 72,
     "autores": [
       358
     ]
@@ -16133,7 +19970,7 @@
     "preco": "34.86",
     "categoria": 6,
     "editora": 104,
-    "capa": null,
+    "capa": 73,
     "autores": [
       358
     ]
@@ -16149,7 +19986,7 @@
     "preco": "34.90",
     "categoria": 6,
     "editora": 104,
-    "capa": null,
+    "capa": 74,
     "autores": [
       358
     ]
@@ -16165,7 +20002,7 @@
     "preco": "30.77",
     "categoria": 6,
     "editora": 104,
-    "capa": null,
+    "capa": 75,
     "autores": [
       358
     ]
@@ -16181,7 +20018,7 @@
     "preco": "15.00",
     "categoria": 22,
     "editora": 39,
-    "capa": null,
+    "capa": 76,
     "autores": [
       363
     ]
@@ -16197,7 +20034,7 @@
     "preco": "7.90",
     "categoria": null,
     "editora": null,
-    "capa": null,
+    "capa": 77,
     "autores": []
   }
 },
@@ -16211,7 +20048,7 @@
     "preco": "17.00",
     "categoria": 89,
     "editora": 39,
-    "capa": null,
+    "capa": 78,
     "autores": [
       364
     ]
@@ -16289,7 +20126,7 @@
     "preco": "54.90",
     "categoria": 7,
     "editora": 58,
-    "capa": null,
+    "capa": 80,
     "autores": [
       200
     ]
@@ -16353,7 +20190,7 @@
     "preco": "60.00",
     "categoria": 41,
     "editora": 29,
-    "capa": null,
+    "capa": 79,
     "autores": [
       369,
       370
@@ -16592,7 +20429,7 @@
     "preco": "20.00",
     "categoria": 65,
     "editora": 180,
-    "capa": null,
+    "capa": 81,
     "autores": [
       41
     ]
@@ -16752,7 +20589,7 @@
     "preco": "10.00",
     "categoria": 65,
     "editora": null,
-    "capa": null,
+    "capa": 83,
     "autores": [
       46
     ]
@@ -16851,7 +20688,7 @@
     "preco": "200.00",
     "categoria": 6,
     "editora": 124,
-    "capa": null,
+    "capa": 85,
     "autores": [
       123
     ]
@@ -16931,7 +20768,7 @@
     "preco": "20.00",
     "categoria": 65,
     "editora": 150,
-    "capa": null,
+    "capa": 87,
     "autores": [
       4
     ]
@@ -16997,7 +20834,7 @@
     "name": "Super User",
     "is_active": true,
     "is_staff": true,
-    "foto": null,
+    "foto": 88,
     "tipo_usuario": 2,
     "groups": [],
     "user_permissions": []
@@ -17051,10 +20888,376 @@
     "name": "Marco André Mendes",
     "is_active": true,
     "is_staff": true,
-    "foto": null,
+    "foto": 51,
     "tipo_usuario": 1,
     "groups": [],
     "user_permissions": []
+  }
+},
+{
+  "model": "core.compra",
+  "pk": 10,
+  "fields": {
+    "usuario": 6,
+    "status": 2,
+    "tipo_pagamento": 1,
+    "data": "2024-10-11T14:54:57.227Z",
+    "total": "260.00"
+  }
+},
+{
+  "model": "core.compra",
+  "pk": 11,
+  "fields": {
+    "usuario": 6,
+    "status": 2,
+    "tipo_pagamento": 1,
+    "data": "2024-10-11T14:56:42.877Z",
+    "total": "788.01"
+  }
+},
+{
+  "model": "core.compra",
+  "pk": 12,
+  "fields": {
+    "usuario": 6,
+    "status": 4,
+    "tipo_pagamento": 1,
+    "data": "2024-10-11T17:00:54.950Z",
+    "total": "159.90"
+  }
+},
+{
+  "model": "core.compra",
+  "pk": 13,
+  "fields": {
+    "usuario": 6,
+    "status": 3,
+    "tipo_pagamento": 1,
+    "data": "2024-10-11T17:25:27.833Z",
+    "total": "60.96"
+  }
+},
+{
+  "model": "core.compra",
+  "pk": 14,
+  "fields": {
+    "usuario": 3,
+    "status": 2,
+    "tipo_pagamento": 1,
+    "data": "2024-10-11T18:13:12.297Z",
+    "total": "198.00"
+  }
+},
+{
+  "model": "core.compra",
+  "pk": 15,
+  "fields": {
+    "usuario": 6,
+    "status": 2,
+    "tipo_pagamento": 1,
+    "data": "2024-11-19T16:14:36.124Z",
+    "total": "36.94"
+  }
+},
+{
+  "model": "core.compra",
+  "pk": 16,
+  "fields": {
+    "usuario": 6,
+    "status": 2,
+    "tipo_pagamento": 1,
+    "data": "2024-11-19T16:19:24.646Z",
+    "total": "564.08"
+  }
+},
+{
+  "model": "core.compra",
+  "pk": 22,
+  "fields": {
+    "usuario": 6,
+    "status": 2,
+    "tipo_pagamento": 1,
+    "data": "2024-12-18T14:06:31.900Z",
+    "total": "48.52"
+  }
+},
+{
+  "model": "core.compra",
+  "pk": 23,
+  "fields": {
+    "usuario": 6,
+    "status": 1,
+    "tipo_pagamento": 1,
+    "data": "2024-12-18T14:35:46.528Z",
+    "total": "0.00"
+  }
+},
+{
+  "model": "core.itenscompra",
+  "pk": 29,
+  "fields": {
+    "compra": 10,
+    "livro": 1,
+    "quantidade": 10,
+    "preco": "20.00"
+  }
+},
+{
+  "model": "core.itenscompra",
+  "pk": 30,
+  "fields": {
+    "compra": 10,
+    "livro": 2,
+    "quantidade": 3,
+    "preco": "10.00"
+  }
+},
+{
+  "model": "core.itenscompra",
+  "pk": 31,
+  "fields": {
+    "compra": 11,
+    "livro": 1,
+    "quantidade": 10,
+    "preco": "20.99"
+  }
+},
+{
+  "model": "core.itenscompra",
+  "pk": 32,
+  "fields": {
+    "compra": 11,
+    "livro": 2,
+    "quantidade": 12,
+    "preco": "35.99"
+  }
+},
+{
+  "model": "core.itenscompra",
+  "pk": 33,
+  "fields": {
+    "compra": 12,
+    "livro": 1,
+    "quantidade": 5,
+    "preco": "20.99"
+  }
+},
+{
+  "model": "core.itenscompra",
+  "pk": 34,
+  "fields": {
+    "compra": 12,
+    "livro": 2,
+    "quantidade": 5,
+    "preco": "10.99"
+  }
+},
+{
+  "model": "core.itenscompra",
+  "pk": 35,
+  "fields": {
+    "compra": 13,
+    "livro": 1,
+    "quantidade": 2,
+    "preco": "20.24"
+  }
+},
+{
+  "model": "core.itenscompra",
+  "pk": 36,
+  "fields": {
+    "compra": 13,
+    "livro": 2,
+    "quantidade": 2,
+    "preco": "10.24"
+  }
+},
+{
+  "model": "core.itenscompra",
+  "pk": 37,
+  "fields": {
+    "compra": 14,
+    "livro": 375,
+    "quantidade": 21,
+    "preco": "9.90"
+  }
+},
+{
+  "model": "core.itenscompra",
+  "pk": 38,
+  "fields": {
+    "compra": 15,
+    "livro": 1,
+    "quantidade": 4,
+    "preco": "8.90"
+  }
+},
+{
+  "model": "core.itenscompra",
+  "pk": 39,
+  "fields": {
+    "compra": 15,
+    "livro": 2,
+    "quantidade": 1,
+    "preco": "10.24"
+  }
+},
+{
+  "model": "core.itenscompra",
+  "pk": 41,
+  "fields": {
+    "compra": 11,
+    "livro": 649,
+    "quantidade": 7,
+    "preco": "20.89"
+  }
+},
+{
+  "model": "core.itenscompra",
+  "pk": 45,
+  "fields": {
+    "compra": 16,
+    "livro": 1,
+    "quantidade": 2,
+    "preco": "8.90"
+  }
+},
+{
+  "model": "core.itenscompra",
+  "pk": 46,
+  "fields": {
+    "compra": 16,
+    "livro": 2,
+    "quantidade": 10,
+    "preco": "10.24"
+  }
+},
+{
+  "model": "core.itenscompra",
+  "pk": 47,
+  "fields": {
+    "compra": 16,
+    "livro": 9,
+    "quantidade": 12,
+    "preco": "36.99"
+  }
+},
+{
+  "model": "core.itenscompra",
+  "pk": 59,
+  "fields": {
+    "compra": 22,
+    "livro": 1,
+    "quantidade": 2,
+    "preco": "8.90"
+  }
+},
+{
+  "model": "core.itenscompra",
+  "pk": 60,
+  "fields": {
+    "compra": 22,
+    "livro": 2,
+    "quantidade": 3,
+    "preco": "10.24"
+  }
+},
+{
+  "model": "core.itenscompra",
+  "pk": 61,
+  "fields": {
+    "compra": 23,
+    "livro": 1,
+    "quantidade": 2,
+    "preco": "8.90"
+  }
+},
+{
+  "model": "core.itenscompra",
+  "pk": 62,
+  "fields": {
+    "compra": 23,
+    "livro": 2,
+    "quantidade": 126,
+    "preco": "10.24"
+  }
+},
+{
+  "model": "core.favorito",
+  "pk": 1,
+  "fields": {
+    "usuario": 6,
+    "livro": 71,
+    "data_atualizacao": "2025-02-10T17:28:21.706Z",
+    "nota": 4,
+    "comentario": "Excelente reflexão."
+  }
+},
+{
+  "model": "core.favorito",
+  "pk": 2,
+  "fields": {
+    "usuario": 6,
+    "livro": 517,
+    "data_atualizacao": "2025-02-10T17:28:21.706Z",
+    "nota": 3,
+    "comentario": "Não é dos melhores dele."
+  }
+},
+{
+  "model": "core.favorito",
+  "pk": 3,
+  "fields": {
+    "usuario": 3,
+    "livro": 71,
+    "data_atualizacao": "2025-02-10T17:28:21.706Z",
+    "nota": 5,
+    "comentario": "Obra prima de C. S. Lewis!"
+  }
+},
+{
+  "model": "core.favorito",
+  "pk": 4,
+  "fields": {
+    "usuario": 6,
+    "livro": 1,
+    "data_atualizacao": "2025-02-10T17:28:21.706Z",
+    "nota": 5,
+    "comentario": "Obra Prima!!!."
+  }
+},
+{
+  "model": "core.favorito",
+  "pk": 5,
+  "fields": {
+    "usuario": 6,
+    "livro": 2,
+    "data_atualizacao": "2025-02-10T17:28:21.706Z",
+    "nota": 1,
+    "comentario": "Não vale a pena."
+  }
+},
+{
+  "model": "core.favorito",
+  "pk": 6,
+  "fields": {
+    "usuario": 6,
+    "livro": 3,
+    "data_atualizacao": "2025-02-10T17:28:21.706Z",
+    "nota": 4,
+    "comentario": null
+  }
+},
+{
+  "model": "core.favorito",
+  "pk": 7,
+  "fields": {
+    "usuario": 6,
+    "livro": 5,
+    "data_atualizacao": "2025-02-10T17:28:21.706Z",
+    "nota": 2,
+    "comentario": "Lamentável."
   }
 }
 ]
