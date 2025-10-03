@@ -1,8 +1,8 @@
 from django.db import transaction
 from django.utils import timezone
 from django_filters.rest_framework import DjangoFilterBackend
-from drf_spectacular.utils import extend_schema
-from rest_framework import status
+from drf_spectacular.utils import extend_schema, inline_serializer
+from rest_framework import serializers, status
 from rest_framework.decorators import action
 from rest_framework.filters import OrderingFilter, SearchFilter
 from rest_framework.permissions import IsAuthenticated
@@ -84,7 +84,14 @@ class CompraViewSet(ModelViewSet):
     @extend_schema(
         summary="Relatório de vendas do mês",
         description="Gera um relatório com o total de vendas e a quantidade de vendas do mês atual.",
-        responses={200: None},
+        responses={200: inline_serializer(
+            name='RelatorioVendasMesResponse',
+            fields={
+                'status': serializers.CharField(),
+                'total_vendas': serializers.FloatField(),
+                'quantidade_vendas': serializers.IntegerField(),
+            },
+        )},
     )
     @action(detail=False, methods=['get'])
     def relatorio_vendas_mes(self, request):
