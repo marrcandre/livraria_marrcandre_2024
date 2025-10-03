@@ -2,10 +2,10 @@
 # It is not intended for manual editing.
 
 [metadata]
-groups = ["default", "dev"]
+groups = ["default", "dev", "pdm-plugins"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:48224e5e3eea68b4870ef9ce31a37a8790786ff4cf179497db5ef3e75321f7f7"
+content_hash = "sha256:d7a14f0268baa26eceef4c764f58d2446bf7e0b5a490003ccb4f4caa64504a45"
 
 [[metadata.targets]]
 requires_python = ">=3.10"
@@ -795,6 +795,17 @@ dependencies = [
 files = [
     {file = "passage_identity-3.0.1-py3-none-any.whl", hash = "sha256:b49640558c96043db6f721ccdb24009ccb3ea48dd0fc55aea5d954e9c4cc04c3"},
     {file = "passage_identity-3.0.1.tar.gz", hash = "sha256:41dae8e067a5884d2e1a3e01fea1e30e33fd31867e2f687312bde8af12b2c08c"},
+]
+
+[[package]]
+name = "pdm-autoexport"
+version = "0.2.0"
+requires_python = ">=3.7"
+summary = "A PDM plugin to sync the exported files with the project file"
+groups = ["pdm-plugins"]
+files = [
+    {file = "pdm_autoexport-0.2.0-py3-none-any.whl", hash = "sha256:385dd748bca5031a54cb3bcfbc1f230712fb6305d8d8ae75ee30affcbf98a4fc"},
+    {file = "pdm_autoexport-0.2.0.tar.gz", hash = "sha256:a7bd49c39cfc8a35dcd648f11e00817c3e1cb4764cb6501ab9d11a621934feac"},
 ]
 
 [[package]]

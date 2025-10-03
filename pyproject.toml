@@ -33,9 +33,9 @@ license = { text = "MIT" }
 [tool.pdm]
 distribution = false
 
-[[tool.pdm.autoexport]]
+[tool.pdm.autoexport]
 filename = "requirements.txt"
-without-hashes = "true"
+without-hashes = true
 
 [tool.ruff]
 line-length = 120
@@ -52,8 +52,10 @@ quote-style = 'single'
 
 [tool.pdm.scripts]
 pre_dev = "python ./scripts/set_my_ip.py"
-dev2 = "python manage.py runserver 0.0.0.0:19003"
-dev = "python -m gunicorn app.asgi:application -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:19003"
+devbase = "python manage.py runserver 0.0.0.0:19003"
+dev = "uvicorn app.asgi:application --host 0.0.0.0 --port 19003 --reload"
+prod = "gunicorn app.asgi:application -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:19003 --workers 4 --threads 2 --timeout 60 --access-logfile - --error-logfile -"
+# dev = "python -m gunicorn app.asgi:application -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:19003"
 createsuperuser = "python manage.py createsuperuser"
 pre_migrate = "python manage.py makemigrations"
 migrate = "python manage.py migrate"
@@ -70,3 +72,6 @@ format = "ruff format"
 
 [dependency-groups]
 dev = ["pylint>=3.0.2", "ipython>=8.26.0", "ruff>=0.11.2"]
+pdm-plugins = [
+    "pdm-autoexport>=0.2.0",
+]

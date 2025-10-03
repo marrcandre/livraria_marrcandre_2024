@@ -1,6 +1,7 @@
 from django.db import transaction
 from django.utils import timezone
 from django_filters.rest_framework import DjangoFilterBackend
+from drf_spectacular.utils import extend_schema
 from rest_framework import status
 from rest_framework.decorators import action
 from rest_framework.filters import OrderingFilter, SearchFilter
@@ -25,6 +26,7 @@ class CompraViewSet(ModelViewSet):
     ordering_fields = ['usuario__email', 'status', 'data']
     ordering = ['-data']
     permission_classes = [IsAuthenticated]
+    queryset = Compra.objects.order_by('-id')
 
     def get_queryset(self):
         usuario = self.request.user
@@ -43,6 +45,11 @@ class CompraViewSet(ModelViewSet):
             return CompraCreateUpdateSerializer
         return CompraSerializer
 
+    @extend_schema(
+        summary="Finalizar compra",
+        description="Finaliza a compra do carrinho de compras do usuário autenticado.",
+        responses={200: None, 400: None, 404: None},
+    )
     @action(detail=True, methods=['post'])
     def finalizar(self, request, pk=None):
         ''' Finaliza a compra do carrinho de compras.'''
@@ -74,6 +81,11 @@ class CompraViewSet(ModelViewSet):
 
         return Response(status=status.HTTP_200_OK, data={'status': 'Compra finalizada'})
 
+    @extend_schema(
+        summary="Relatório de vendas do mês",
+        description="Gera um relatório com o total de vendas e a quantidade de vendas do mês atual.",
+        responses={200: None},
+    )
     @action(detail=False, methods=['get'])
     def relatorio_vendas_mes(self, request):
         agora = timezone.now()
@@ -93,6 +105,12 @@ class CompraViewSet(ModelViewSet):
             status=status.HTTP_200_OK,
         )
 
+    @extend_schema(
+        summary="Adicionar livro ao carrinho",
+        description="Adiciona um livro ao carrinho de compras do usuário autenticado.",
+        request=CompraAdicionarLivroAoCarrinhoSerializer,
+        responses={200: CompraSerializer, 400: None, 404: None},
+    )
     @action(detail=False, methods=['post'])
     def adicionar_ao_carrinho(self, request):
         serializer = CompraAdicionarLivroAoCarrinhoSerializer(data=request.data)

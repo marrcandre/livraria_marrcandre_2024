@@ -137,8 +137,8 @@ AUTH_USER_MODEL = 'core.User'
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': ('core.authentication.TokenAuthentication',),
     'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly',),
-    'DEFAULT_PAGINATION_CLASS': 'app.pagination.CustomPagination',
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    'DEFAULT_PAGINATION_CLASS': 'app.pagination.CustomPagination',
     'PAGE_SIZE': 10,
 }
 

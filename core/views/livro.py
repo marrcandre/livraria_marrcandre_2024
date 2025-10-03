@@ -1,5 +1,6 @@
 from django.db.models.aggregates import Sum
 from django_filters.rest_framework import DjangoFilterBackend
+from drf_spectacular.utils import extend_schema
 from rest_framework import status
 from rest_framework.decorators import action
 from rest_framework.filters import OrderingFilter, SearchFilter
@@ -35,6 +36,12 @@ class LivroViewSet(ModelViewSet):
 
         return LivroSerializer
 
+    @extend_schema(
+        summary="Alterar preço do livro",
+        description="Permite alterar o preço de um livro específico.",
+        request=LivroAlterarPrecoSerializer,
+        responses={200: None, 400: None, 404: None},
+    )
     @action(detail=True, methods=['patch'])
     def alterar_preco(self, request, pk=None):
         livro = self.get_object()
@@ -50,6 +57,12 @@ class LivroViewSet(ModelViewSet):
             {'detail': f"Preço do livro '{livro.titulo}' atualizado para {livro.preco}."}, status=status.HTTP_200_OK
         )
 
+    @extend_schema(
+        summary="Ajustar estoque do livro",
+        description="Permite ajustar a quantidade em estoque de um livro específico.",
+        request=LivroAjustarEstoqueSerializer,
+        responses={200: None, 400: None, 404: None},
+    )
     @action(detail=True, methods=['post'])
     def ajustar_estoque(self, request, pk=None):
         livro = self.get_object()
@@ -66,6 +79,11 @@ class LivroViewSet(ModelViewSet):
             {'status': 'Quantidade ajustada com sucesso', 'novo_estoque': livro.quantidade}, status=status.HTTP_200_OK
         )
 
+    @extend_schema(
+        summary="Livros mais vendidos",
+        description="Retorna os livros com mais de 10 unidades vendidas.",
+        responses={200: None},
+    )
     @action(detail=False, methods=['get'])
     def mais_vendidos(self, request):
         """
@@ -84,6 +102,12 @@ class LivroViewSet(ModelViewSet):
 
         return Response(data, status=status.HTTP_200_OK)
 
+    @extend_schema(
+        summary="Adicionar livro ao carrinho",
+        description="Adiciona um livro ao carrinho de compras do usuário autenticado.",
+        request=LivroAdicionarAoCarrinhoSerializer,
+        responses={200: CompraSerializer, 400: None, 404: None},
+    )
     @action(detail=True, methods=['post'])
     def adicionar_ao_carrinho(self, request, pk=None):
         livro = self.get_object()
@@ -106,6 +130,12 @@ class LivroViewSet(ModelViewSet):
         compra_serializada = CompraSerializer(compra)
         return Response(compra_serializada.data, status=status.HTTP_200_OK)
 
+    @extend_schema(
+        summary="Favoritar livro",
+        description="Favorita um livro ou atualiza os dados (nota e/ou comentário) de um favorito existente.",
+        request=FavoritoSerializer,
+        responses={200: FavoritoSerializer, 201: FavoritoSerializer, 400: None, 404: None},
+    )
     @action(detail=True, methods=['post', 'put', 'patch'])
     def favoritar(self, request, pk=None):
         """
