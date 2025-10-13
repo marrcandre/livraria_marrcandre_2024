@@ -13,18 +13,6 @@ from uploader.models import Image
 from uploader.serializers import ImageSerializer
 
 
-class LivroAjustarEstoqueSerializer(Serializer):
-    quantidade = IntegerField()
-
-    def validate_quantidade(self, value):
-        livro = self.context.get('livro')
-        if livro:
-            nova_quantidade = livro.quantidade + value
-            if nova_quantidade < 0:
-                raise ValidationError('A quantidade em estoque não pode ser negativa.')
-        return value
-
-
 class LivroAdicionarAoCarrinhoSerializer(Serializer):
     quantidade = IntegerField(default=1, min_value=1)
 
@@ -37,6 +25,18 @@ class LivroAdicionarAoCarrinhoSerializer(Serializer):
         return data
 
 
+class LivroAjustarEstoqueSerializer(Serializer):
+    quantidade = IntegerField()
+
+    def validate_quantidade(self, value):
+        livro = self.context.get('livro')
+        if livro:
+            nova_quantidade = livro.quantidade + value
+            if nova_quantidade < 0:
+                raise ValidationError('A quantidade em estoque não pode ser negativa.')
+        return value
+
+
 class LivroAlterarPrecoSerializer(Serializer):
     preco = DecimalField(max_digits=10, decimal_places=2)
 
@@ -45,36 +45,6 @@ class LivroAlterarPrecoSerializer(Serializer):
         if value <= 0:
             raise ValidationError('O preço deve ser um valor positivo.')
         return value
-
-
-class LivroRetrieveSerializer(ModelSerializer):
-    capa = ImageSerializer(required=False)
-
-    class Meta:
-        model = Livro
-        fields = '__all__'
-        depth = 1
-
-
-class LivroListSerializer(ModelSerializer):
-    class Meta:
-        model = Livro
-        fields = ['id', 'titulo', 'preco']
-
-
-class LivroSerializer(ModelSerializer):
-    capa_attachment_key = SlugRelatedField(
-        source='capa',
-        queryset=Image.objects.all(),
-        slug_field='attachment_key',
-        required=False,
-        write_only=True,
-    )
-    capa = ImageSerializer(required=False, read_only=True)
-
-    class Meta:
-        model = Livro
-        fields = '__all__'
 
 
 class LivroComFavoritosSerializer(ModelSerializer):
@@ -97,3 +67,41 @@ class LivroComFavoritosSerializer(ModelSerializer):
 
     def get_comentarios(self, obj):
         return obj.favoritos.exclude(comentario__isnull=True).values('usuario__email', 'comentario', 'nota')
+
+
+class LivroListSerializer(ModelSerializer):
+    class Meta:
+        model = Livro
+        fields = ['id', 'titulo', 'preco']
+
+
+class LivroMaisVendidoSerializer(ModelSerializer):
+    total_vendidos = IntegerField()
+
+    class Meta:
+        model = Livro
+        fields = ['id', 'titulo', 'total_vendidos']
+
+
+class LivroRetrieveSerializer(ModelSerializer):
+    capa = ImageSerializer(required=False)
+
+    class Meta:
+        model = Livro
+        fields = '__all__'
+        depth = 1
+
+
+class LivroSerializer(ModelSerializer):
+    capa_attachment_key = SlugRelatedField(
+        source='capa',
+        queryset=Image.objects.all(),
+        slug_field='attachment_key',
+        required=False,
+        write_only=True,
+    )
+    capa = ImageSerializer(required=False, read_only=True)
+
+    class Meta:
+        model = Livro
+        fields = '__all__'

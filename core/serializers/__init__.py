@@ -15,7 +15,9 @@ from .livro import (
     LivroAdicionarAoCarrinhoSerializer,
     LivroAjustarEstoqueSerializer,
     LivroAlterarPrecoSerializer,
+    LivroComFavoritosSerializer,
     LivroListSerializer,
+    LivroMaisVendidoSerializer,
     LivroRetrieveSerializer,
     LivroSerializer,
 )

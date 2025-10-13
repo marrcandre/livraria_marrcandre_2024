@@ -15,6 +15,7 @@ from core.serializers import (
     LivroAjustarEstoqueSerializer,
     LivroAlterarPrecoSerializer,
     LivroListSerializer,
+    LivroMaisVendidoSerializer,
     LivroRetrieveSerializer,
     LivroSerializer,
 )
@@ -80,27 +81,27 @@ class LivroViewSet(ModelViewSet):
         )
 
     @extend_schema(
-        summary="Livros mais vendidos",
-        description="Retorna os livros com mais de 10 unidades vendidas.",
-        responses={200: None},
+        summary="Lista os livros mais vendidos",
+        description="Retorna os livros que venderam mais de 10 unidades.",
+        responses={
+            200: LivroMaisVendidoSerializer(many=True)
+        },
     )
     @action(detail=False, methods=['get'])
     def mais_vendidos(self, request):
-        """
-        Retorna os livros com mais de 10 unidades vendidas.
-        """
-        livros = Livro.objects.annotate(total_vendidos=Sum('itenscompra__quantidade')).filter(total_vendidos__gt=10)
+        livros = Livro.objects.annotate(
+            total_vendidos=Sum('itens_compra__quantidade')
+        ).filter(total_vendidos__gt=10).order_by('-total_vendidos')
 
-        data = [
-            {
-                'id': livro.id,
-                'titulo': livro.titulo,
-                'total_vendidos': livro.total_vendidos,
-            }
-            for livro in livros
-        ]
+        serializer = LivroMaisVendidoSerializer(livros, many=True)
 
-        return Response(data, status=status.HTTP_200_OK)
+        if not serializer.data:
+            return Response(
+                {"detail": "Nenhum livro excedeu 10 vendas."},
+                status=status.HTTP_200_OK
+            )
+
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
     @extend_schema(
         summary="Adicionar livro ao carrinho",
