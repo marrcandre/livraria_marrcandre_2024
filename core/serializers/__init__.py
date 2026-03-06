@@ -21,4 +21,4 @@ from .livro import (
     LivroRetrieveSerializer,
     LivroSerializer,
 )
-from .user import UserSerializer
+from .user import UserRegistrationSerializer, UserSerializer
