@@ -70,9 +70,12 @@ class LivroComFavoritosSerializer(ModelSerializer):
 
 
 class LivroListSerializer(ModelSerializer):
+    capa = ImageSerializer(required=False)
+
     class Meta:
         model = Livro
-        fields = ['id', 'titulo', 'preco']
+        fields = ['id', 'titulo', 'preco', 'isbn', 'quantidade', 'categoria', 'editora', 'autores', 'capa']
+        depth = 1
 
 
 class LivroMaisVendidoSerializer(ModelSerializer):
