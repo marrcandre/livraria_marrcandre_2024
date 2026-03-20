@@ -11,7 +11,7 @@ from rest_framework.serializers import (
 )
 
 from core.models import Compra, ItensCompra, Livro
-from core.serializers.livro import Serializer
+from core.serializers.livro import LivroListSerializer, Serializer
 
 
 class ItensCompraCreateUpdateSerializer(ModelSerializer):
@@ -40,6 +40,7 @@ class ItensCompraListSerializer(ModelSerializer):
 
 
 class ItensCompraSerializer(ModelSerializer):
+    livro = LivroListSerializer(read_only=True)
     total = SerializerMethodField()
 
     def get_total(self, item):
@@ -48,7 +49,6 @@ class ItensCompraSerializer(ModelSerializer):
     class Meta:
         model = ItensCompra
         fields = ('livro', 'quantidade', 'preco', 'total')
-        depth = 1
 
 
 class CompraCreateUpdateSerializer(ModelSerializer):
