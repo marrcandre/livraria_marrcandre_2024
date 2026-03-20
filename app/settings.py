@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'cloudinary',
     'corsheaders',
+    'debug_toolbar',
     'django_extensions',
     'django_filters',
     'drf_spectacular',
@@ -51,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
@@ -157,3 +159,6 @@ SIMPLE_JWT = {
 }
 
 print(f'{MODE = } \n{MEDIA_URL = } \n{DATABASES = }')
+
+# Django Debug Toolbar
+INTERNAL_IPS = ['127.0.0.1']

@@ -26,6 +26,7 @@ dependencies = [
   'setuptools>=68.2.2',
   'uvicorn>=0.29.0',
   'whitenoise[brotli]>=6.6.0',
+  "django-debug-toolbar>=6.2.0",
 ]
 requires-python = ">=3.10"
 license = { text = "MIT" }

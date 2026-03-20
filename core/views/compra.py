@@ -31,12 +31,12 @@ class CompraViewSet(ModelViewSet):
     def get_queryset(self):
         usuario = self.request.user
         if usuario.is_superuser:
-            return Compra.objects.order_by('-id')
+            return Compra.objects.prefetch_related('itens').prefetch_related('itens__livro').prefetch_related('usuario').order_by('-id')
         if usuario.groups.filter(name='administradores'):
-            return Compra.objects.order_by('-id')
+            return Compra.objects.prefetch_related('itens').prefetch_related('itens__livro').prefetch_related('usuario').order_by('-id')
         if usuario.tipo_usuario == User.TipoUsuario.GERENTE:
-            return Compra.objects.order_by('-id')
-        return Compra.objects.filter(usuario=usuario)
+            return Compra.objects.prefetch_related('itens').prefetch_related('itens__livro').prefetch_related('usuario').order_by('-id')
+        return Compra.objects.filter(usuario=usuario).prefetch_related('itens').prefetch_related('itens__livro').prefetch_related('usuario').order_by('-id')
 
     def get_serializer_class(self):
         if self.action == 'list':

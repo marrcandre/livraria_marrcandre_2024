@@ -5,7 +5,7 @@
 groups = ["default", "dev", "pdm-plugins"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:4037d8c65e57347f522288c7c8222270968608a3014faadd10bbf272b9bd92d5"
+content_hash = "sha256:749dbc417ddd9f5b5519e621dc58e4e3f3e83dcf62402de42ce4f55a9ed12c9c"
 
 [[metadata.targets]]
 requires_python = ">=3.10"
@@ -362,6 +362,21 @@ dependencies = [
 files = [
     {file = "django_cors_headers-4.9.0-py3-none-any.whl", hash = "sha256:15c7f20727f90044dcee2216a9fd7303741a864865f0c3657e28b7056f61b449"},
     {file = "django_cors_headers-4.9.0.tar.gz", hash = "sha256:fe5d7cb59fdc2c8c646ce84b727ac2bca8912a247e6e68e1fb507372178e59e8"},
+]
+
+[[package]]
+name = "django-debug-toolbar"
+version = "6.2.0"
+requires_python = ">=3.10"
+summary = "A configurable set of panels that display various debug information about the current request/response."
+groups = ["default"]
+dependencies = [
+    "django>=4.2.9",
+    "sqlparse>=0.2",
+]
+files = [
+    {file = "django_debug_toolbar-6.2.0-py3-none-any.whl", hash = "sha256:1575461954e6befa720e999dec13fe4f1cc8baf40b6c3ac2aec5f340c0f9c85f"},
+    {file = "django_debug_toolbar-6.2.0.tar.gz", hash = "sha256:dc1c174d8fb0ea01435e02d9ceef735cf62daf37c1a6a5692d33b4127327679b"},
 ]
 
 [[package]]
